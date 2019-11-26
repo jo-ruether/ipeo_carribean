@@ -61,6 +61,7 @@ def preprocess_training(geojson_train,
         roof_image_fp = join(roofs_train_dir, roof_material, str(roof_id)+".tif")
         with rasterio.open(roof_image_fp, "w", **roof_meta) as dest:
             dest.write(roof_image)
+    print("Preprocessing training finished")
 
 
 def preprocess_test(geojson_test,
@@ -109,7 +110,7 @@ def preprocess_test(geojson_test,
         with rasterio.open(roof_image_fp, "w", **roof_meta) as dest:
             dest.write(roof_image)
 
-    print("Preprocessing training finished")
+    print("Preprocessing test finished")
 
 def preprocess_region(region):
     """Short summary.

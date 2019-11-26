@@ -13,7 +13,7 @@ from sklearn.decomposition import PCA
 
 import pickle
 
-def extract_features(region):
+def extract_features_training(region):
 
     roof_dir = join('..', '..', 'data', region, 'roofs_train')
     materials = {'healthy_metal':0, 'irregular_metal':1,
@@ -56,6 +56,40 @@ def extract_features(region):
                 i = i + 1
 
     return resnet50_feature_matrix, labels
+
+def extract_features_test(region):
+
+    roof_dir = join('..', '..', 'data', region, 'roofs_test')
+
+    model = ResNet50(weights='imagenet', include_top=False, pooling='max')
+    #model.summary()
+
+    # Count the number of roofs
+    nof_roofs = len([name for name in listdir(roof_dir) if isfile(join(roof_dir, name))])
+
+    resnet50_feature_matrix = np.zeros((nof_roofs, 2048), dtype=float)
+
+    # Walk through all images
+    i = 0;
+
+    for root, dirs, files in walk(roof_dir):
+        for file in files:
+            img_fp = join(roof_dir, file)
+
+            # Pad if size is too small, preprocess
+            img = image.load_img(img_fp, target_size=(224, 224))
+            img_data = image.img_to_array(img)
+            img_data = np.expand_dims(img_data, axis=0)
+            img_data = preprocess_input(img_data)
+
+            # Compute features
+            resnet50_feature = model.predict(img_data)
+            resnet50_feature_np = np.array(resnet50_feature)
+            resnet50_feature_matrix[i] = resnet50_feature_np.flatten()
+            i = i + 1
+
+    return resnet50_feature_matrix
+
 
 def plot_tSNE(features, labels=None, number_of_materials=5):
     if labels is None:
