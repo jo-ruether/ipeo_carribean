@@ -12,9 +12,6 @@ from os.path import join
 
 from pyproj import Proj, transform
 
-def greetings():
-    print("Hallo")
-
 def preprocess_training(geojson_train,
                         image_fp,
                         profile,
