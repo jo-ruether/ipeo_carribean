@@ -34,10 +34,14 @@
 	This is why the possibilities of image processing for automatic recognition of vulnerable houses on the basis of drone imagery is explored. Such a technology could assist building inspectors and narrow down large areas to those that are worth a closer inspection on the ground. 
 	The material that roofs are made up of is a central indicator of how well a house is prepared against natural disasters. Therefore, classifying roof material from aerial images is a key step to identify precarious houses. \\
 	
-	The above background led to the initiation of the \textit{Open AI Caribbean Challenge: Mapping Disaster Risk from Aerial Imagery}, which was conducted in between October and December 2020 on \textit{drivendata.org}.	
-	 This report describes an approach to solve this challenge.
+	\subsection{Open AI Challenge}
 	
-	\subsection{Literature Review}
+	The above background led to the initiation of the \textit{Open AI Caribbean Challenge: Mapping Disaster Risk from Aerial Imagery}, which was conducted in between October and December 2020 on \textit{drivendata.org}.	
+	This report describes an approach to solve this challenge.\\
+	
+	\textbf{Probabilities instead of hard labels}
+	
+	\subsection{Previous Work}
 	
 	In many applications, the identification of roofs is considered useful. Roof segmentation is often done with LiDAR data, as presented in \cite{Chen2012}. Other papers such as \cite{Soman2019} have successfully attempted roof segmentation using only drone imagery, which is less costly. This step will become relevant for the task at hand. The approach discussed in this report however uses images of roofs that have already been segmented.\\
 	
@@ -70,7 +74,7 @@
 	
 	\subsection{Labels}
 	
-	Roofs are labeled as one of five classes: 
+	Roofs are labeled as one of five classes, examples of which are given in Fig.~\ref{fig:mat_examples}: 
 	
 	\begin{enumerate}
 		\itemsep0em
@@ -80,24 +84,86 @@
 		\item Irregular Metal: Roofs that are slightly damaged, rusted or patched.
 		\item Other: Roofs that do not fit into other categories (include tiles, red painted, other materials).
 	\end{enumerate}
-	
+
 	\begin{figure}
-	\begin{subfigure}[c]{0.5\textwidth}
 		
-		\includegraphics[width=0.25\textwidth]{figures/hm1.tif}
-		\subcaption{Subfigure Bild Nr. 1}
-		
-		\includegraphics[width=0.25\textwidth]{figures/hm1.tif}
-		\subcaption{Subfigure Bild Nr. 1}
-		
+		\centering
+		\begin{subfigure}[c]{0.32\textwidth}
+			\includegraphics[width=0.47\textwidth]{figures/mat_examples/conc1.png}		
+			\includegraphics[width=0.47\textwidth]{figures/mat_examples/conc2.png}
+			\subcaption{Concrete/Cement}
+		\end{subfigure}
+		\begin{subfigure}[c]{0.32\textwidth}
+			\includegraphics[width=0.47\textwidth]{figures/mat_examples/hm1.png}		
+			\includegraphics[width=0.47\textwidth]{figures/mat_examples/hm2.png}
+			\subcaption{Healthy Metal}
+		\end{subfigure}
+		\begin{subfigure}[c]{0.32\textwidth}
+			\includegraphics[width=0.47\textwidth]{figures/mat_examples/inc1.png}		
+			\includegraphics[width=0.47\textwidth]{figures/mat_examples/inc2.png}
+			\subcaption{Incomplete}
+		\end{subfigure}
+		\begin{subfigure}[c]{0.32\textwidth}
+			\includegraphics[width=0.32\textwidth]{figures/mat_examples/irr1.png}		
+			\includegraphics[width=0.32\textwidth]{figures/mat_examples/irr2.png}
+			\subcaption{Irregular Metal}
+		\end{subfigure}
+		\begin{subfigure}[c]{0.32\textwidth}
+			\centering
+			\includegraphics[width=0.35\textwidth]{figures/mat_examples/other1.png}		
+			\includegraphics[width=0.45\textwidth]{figures/mat_examples/other2.png}
+			\subcaption{Other}
+		\end{subfigure}
+	\caption{Example images for each material class. (Scales differ)}
+	\label{fig:mat_examples}
+	\end{figure}
+
+\subsection{Data Noise}
+
+Class membership is unfortunately sometimes ambiguous in the provided groundtruth data. 
+First, the labels are used inconsistently. This is especially true for "irregular" and "healthy metal". Where rusty roofs should be labelled as "irregular", many of them get a "healthy metal" label.
+Moreover there is confusion about features that make a roof "irregular" or "incomplete".
+
+These inconsistencies might stem from different annotators labeling images.
+
+
+Second, labels are sometimes clearly incorrect, e.g. concrete roofs are labeled as "healthy metal". Some regions seems to be annotated with more care than others. It is impossible to quantify the extent to which the set is noisy. 
+Some examples of these ambiguities are shown in Fig.~\ref{fig:ambiguities}.
+The implications for the results are discussed in section~\ref{sec:discussion}.
+
+
+	\begin{figure}
+	
+	\centering
+	\begin{subfigure}[c]{0.32\textwidth}
+		\includegraphics[width=0.47\textwidth]{figures/mat_examples/conc1.png}		
+		\includegraphics[width=0.47\textwidth]{figures/mat_examples/conc2.png}
+		\subcaption{Concrete/Cement}
 	\end{subfigure}
+	\begin{subfigure}[c]{0.32\textwidth}
+		\includegraphics[width=0.47\textwidth]{figures/mat_examples/hm1.png}		
+		\includegraphics[width=0.47\textwidth]{figures/mat_examples/hm2.png}
+		\subcaption{Healthy Metal}
+	\end{subfigure}
+	\begin{subfigure}[c]{0.32\textwidth}
+		\includegraphics[width=0.47\textwidth]{figures/mat_examples/inc1.png}		
+		\includegraphics[width=0.47\textwidth]{figures/mat_examples/inc2.png}
+		\subcaption{Incomplete}
+	\end{subfigure}
+	\begin{subfigure}[c]{0.32\textwidth}
+		\includegraphics[width=0.32\textwidth]{figures/mat_examples/irr1.png}		
+		\includegraphics[width=0.32\textwidth]{figures/mat_examples/irr2.png}
+		\subcaption{Irregular Metal}
+	\end{subfigure}
+	\begin{subfigure}[c]{0.32\textwidth}
+		\centering
+		\includegraphics[width=0.35\textwidth]{figures/mat_examples/other1.png}		
+		\includegraphics[width=0.45\textwidth]{figures/mat_examples/other2.png}
+		\subcaption{Other}
+	\end{subfigure}
+	\caption{Example images for each material class. (Scales differ)}
+	\label{fig:mat_examples}
 \end{figure}
-	
-	\subsection{Noise}
-	
-		 It tackles the problem of classifying roof material from 
-	
-	What was given, footprints etc.
 	
 	\section{Proposed Processing Routine}
 	includes flowchart
@@ -106,7 +172,11 @@
 	Results qualitative (e.g. maps) and quantitative (e.g. accuracies, statistics). /!\ This implies that you have either access to groundtruth data or digitized/photointerpreted some areas in order to compute accuracies.
 	
 	\section{Discussion}
+	\label{sec:discussion}
 	Discussion where you are critical about what has been done and what could be further explored. You have investigated a topic and achieving your initial goal is not always possible in a fixed time frame, however you should be able to assess your situation and what should then be done/improved in order to reach your goal.
+	
+	
+	!!!Noisy Data!!!
 	
 	\section{Appendix}
 	APPENDIX: Include your scripts (Matlab, GoogleEarthEngine or others) and the specific functions you used in QGIS (if applicable)

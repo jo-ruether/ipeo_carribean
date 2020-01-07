@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.10)  7 JAN 2020 17:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.10)  7 JAN 2020 18:11
 entering extended mode
 **./report.tex
 (report.tex
@@ -427,71 +427,95 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--36
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 42--43
+Underfull \hbox (badness 10000) in paragraph at lines 39--41
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 50--52
+Underfull \hbox (badness 10000) in paragraph at lines 46--47
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--56
 
  []
 
 [1
 
 {C:/Users/Johannes/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 58--59
+Underfull \hbox (badness 10000) in paragraph at lines 62--63
 \OT1/cmr/m/n/10.95 https://www.drivendata.org/competitions/58/disaster-
  []
 
-Package epstopdf Info: Source file: <figures/hm1.tif>
-(epstopdf)                    date: 2019-11-17 17:42:06
-(epstopdf)                    size: 78147 bytes
-(epstopdf)             Output file: <figures/hm1-tif-converted-to.png>
-(epstopdf)             Command: <convert figures/hm1.tif figures/hm1-tif-conver
-ted-to.png>
-(epstopdf)             \includegraphics on input line 87.
-runsystem(convert figures/hm1.tif figures/hm1-tif-converted-to.png)...disabled 
-(restricted).
+<figures/mat_examples/conc1.png, id=10, 436.63126pt x 497.86pt>
+File: figures/mat_examples/conc1.png Graphic file (type png)
+<use figures/mat_examples/conc1.png>
+Package pdftex.def Info: figures/mat_examples/conc1.png  used on input line 92.
 
-Package epstopdf Info: Result file: <figures/hm1-tif-converted-to.png>.
+(pdftex.def)             Requested size: 75.00075pt x 85.5163pt.
+<figures/mat_examples/conc2.png, id=12, 256.96pt x 265.99374pt>
+File: figures/mat_examples/conc2.png Graphic file (type png)
+<use figures/mat_examples/conc2.png>
+Package pdftex.def Info: figures/mat_examples/conc2.png  used on input line 93.
 
-! Package pdftex.def Error: File `figures/hm1-tif-converted-to.png' not found: 
-using draft setting.
+(pdftex.def)             Requested size: 75.00075pt x 77.63542pt.
+<figures/mat_examples/hm1.png, id=13, 246.9225pt x 249.93375pt>
+File: figures/mat_examples/hm1.png Graphic file (type png)
+<use figures/mat_examples/hm1.png>
+Package pdftex.def Info: figures/mat_examples/hm1.png  used on input line 97.
+(pdftex.def)             Requested size: 75.00075pt x 75.91505pt.
+<figures/mat_examples/hm2.png, id=14, 199.74625pt x 184.69pt>
+File: figures/mat_examples/hm2.png Graphic file (type png)
+<use figures/mat_examples/hm2.png>
+Package pdftex.def Info: figures/mat_examples/hm2.png  used on input line 98.
+(pdftex.def)             Requested size: 75.00075pt x 69.34593pt.
+<figures/mat_examples/inc1.png, id=15, 331.2375pt x 225.84375pt>
+File: figures/mat_examples/inc1.png Graphic file (type png)
+<use figures/mat_examples/inc1.png>
+Package pdftex.def Info: figures/mat_examples/inc1.png  used on input line 102.
 
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.87 ...ics[width=0.25\textwidth]{figures/hm1.tif}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+(pdftex.def)             Requested size: 75.00075pt x 51.13658pt.
+<figures/mat_examples/inc2.png, id=16, 330.23375pt x 278.03876pt>
+File: figures/mat_examples/inc2.png Graphic file (type png)
+<use figures/mat_examples/inc2.png>
+Package pdftex.def Info: figures/mat_examples/inc2.png  used on input line 103.
 
-Package epstopdf Info: Source file: <figures/hm1.tif>
-(epstopdf)                    date: 2019-11-17 17:42:06
-(epstopdf)                    size: 78147 bytes
-(epstopdf)             Output file: <figures/hm1-tif-converted-to.png>
-(epstopdf)             Command: <convert figures/hm1.tif figures/hm1-tif-conver
-ted-to.png>
-(epstopdf)             \includegraphics on input line 90.
-runsystem(convert figures/hm1.tif figures/hm1-tif-converted-to.png)...disabled 
-(restricted).
+(pdftex.def)             Requested size: 75.00075pt x 63.14572pt.
+<figures/mat_examples/irr1.png, id=17, 217.81375pt x 181.67876pt>
+File: figures/mat_examples/irr1.png Graphic file (type png)
+<use figures/mat_examples/irr1.png>
+Package pdftex.def Info: figures/mat_examples/irr1.png  used on input line 107.
 
-Package epstopdf Info: Result file: <figures/hm1-tif-converted-to.png>.
+(pdftex.def)             Requested size: 51.06537pt x 42.59193pt.
+<figures/mat_examples/irr2.png, id=18, 105.39375pt x 173.64874pt>
+File: figures/mat_examples/irr2.png Graphic file (type png)
+<use figures/mat_examples/irr2.png>
+Package pdftex.def Info: figures/mat_examples/irr2.png  used on input line 108.
 
-! Package pdftex.def Error: File `figures/hm1-tif-converted-to.png' not found: 
-using draft setting.
+(pdftex.def)             Requested size: 51.06537pt x 84.13739pt.
+<figures/mat_examples/other1.png, id=19, 113.42375pt x 130.4875pt>
+File: figures/mat_examples/other1.png Graphic file (type png)
+<use figures/mat_examples/other1.png>
+Package pdftex.def Info: figures/mat_examples/other1.png  used on input line 11
+3.
+(pdftex.def)             Requested size: 55.85245pt x 64.25401pt.
+<figures/mat_examples/other2.png, id=20, 710.655pt x 666.49pt>
+File: figures/mat_examples/other2.png Graphic file (type png)
+<use figures/mat_examples/other2.png>
+Package pdftex.def Info: figures/mat_examples/other2.png  used on input line 11
+4.
+(pdftex.def)             Requested size: 71.80856pt x 67.34445pt.
 
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.90 ...ics[width=0.25\textwidth]{figures/hm1.tif}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+Underfull \hbox (badness 10000) in paragraph at lines 121--125
 
-[2] (report.bbl
+ []
+
+[2 <./figures/mat_examples/conc1.png> <./figures/mat_examples/conc2.png> <./fig
+ures/mat_examples/hm1.png> <./figures/mat_examples/hm2.png> <./figures/mat_exam
+ples/inc1.png> <./figures/mat_examples/inc2.png> <./figures/mat_examples/irr1.p
+ng> <./figures/mat_examples/irr2.png> <./figures/mat_examples/other1.png> <./fi
+gures/mat_examples/other2.png>] (report.bbl
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
@@ -500,23 +524,23 @@ Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
 ) [3] (report.aux) ) 
 Here is how much of TeX's memory you used:
- 4253 strings out of 493305
- 66138 string characters out of 3128497
- 124480 words of memory out of 3000000
- 7752 multiletter control sequences out of 15000+200000
- 10222 words of font info for 37 fonts, out of 3000000 for 9000
+ 4305 strings out of 493305
+ 67638 string characters out of 3128497
+ 126480 words of memory out of 3000000
+ 7795 multiletter control sequences out of 15000+200000
+ 10362 words of font info for 37 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,9n,40p,469b,433s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,9n,40p,469b,445s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/Johannes/AppData/Local/Programs/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Johannes/AppData/Local/Programs/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Johannes/AppData/L
-ocal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Joh
-annes/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.p
+type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Johannes/AppData/Local/Programs/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Johannes/AppData/
+Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Jo
+hannes/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.p
 fb><C:/Users/Johannes/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmtt10.pfb>
-Output written on report.pdf (3 pages, 87880 bytes).
+onts/cm/cmti10.pfb>
+Output written on report.pdf (3 pages, 1517311 bytes).
 PDF statistics:
- 32 PDF objects out of 1000 (max. 8388607)
+ 53 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
