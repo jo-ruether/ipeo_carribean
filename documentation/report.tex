@@ -135,34 +135,25 @@ The implications for the results are discussed in section~\ref{sec:discussion}.
 	\begin{figure}
 	
 	\centering
-	\begin{subfigure}[c]{0.32\textwidth}
-		\includegraphics[width=0.47\textwidth]{figures/mat_examples/conc1.png}		
-		\includegraphics[width=0.47\textwidth]{figures/mat_examples/conc2.png}
-		\subcaption{Concrete/Cement}
+	\begin{subfigure}[c]{0.5\textwidth}
+		\includegraphics[width=0.47\textwidth]{figures/wrong_labels/hm_rusty.png}
+		\subcaption{Labeled as "healthy metal"}		
+		\includegraphics[width=0.47\textwidth]{figures/wrong_labels/irr_rusty.png}
+		\subcaption{Labeled as "irregular metal"}
 	\end{subfigure}
-	\begin{subfigure}[c]{0.32\textwidth}
-		\includegraphics[width=0.47\textwidth]{figures/mat_examples/hm1.png}		
-		\includegraphics[width=0.47\textwidth]{figures/mat_examples/hm2.png}
-		\subcaption{Healthy Metal}
-	\end{subfigure}
-	\begin{subfigure}[c]{0.32\textwidth}
-		\includegraphics[width=0.47\textwidth]{figures/mat_examples/inc1.png}		
-		\includegraphics[width=0.47\textwidth]{figures/mat_examples/inc2.png}
-		\subcaption{Incomplete}
-	\end{subfigure}
-	\begin{subfigure}[c]{0.32\textwidth}
-		\includegraphics[width=0.32\textwidth]{figures/mat_examples/irr1.png}		
-		\includegraphics[width=0.32\textwidth]{figures/mat_examples/irr2.png}
-		\subcaption{Irregular Metal}
+	\begin{subfigure}[c]{0.5\textwidth}
+		\includegraphics[width=0.47\textwidth]{figures/wrong_labels/irr_holes.png}
+		\subcaption{Labeled as "irregular metal"}		
+		\includegraphics[width=0.47\textwidth]{figures/wrong_labels/inc_holes.png}
+		\subcaption{Labeled as "incomplete"}
 	\end{subfigure}
 	\begin{subfigure}[c]{0.32\textwidth}
 		\centering
-		\includegraphics[width=0.35\textwidth]{figures/mat_examples/other1.png}		
-		\includegraphics[width=0.45\textwidth]{figures/mat_examples/other2.png}
-		\subcaption{Other}
+		\includegraphics[width=0.35\textwidth]{figures/wrong_labels/hm_should_be_conc.png}	
+		\subcaption{Labeled as "healthy metal" where clearly concrete}
 	\end{subfigure}
 	\caption{Example images for each material class. (Scales differ)}
-	\label{fig:mat_examples}
+	\label{fig:ambiguities}
 \end{figure}
 	
 	\section{Proposed Processing Routine}
