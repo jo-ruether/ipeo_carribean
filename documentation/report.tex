@@ -9,6 +9,10 @@
 \usepackage[top=0.8in, bottom=0.8in, left=0.8in, right=0.8in]{geometry}
 % Add other packages here %
 
+\usepackage{epstopdf}
+\epstopdfDeclareGraphicsRule{.tif}{png}{.png}{convert #1 \OutputFile}
+\AppendGraphicsExtensions{.tif}
+
 % Put your group number and names in the author field %
 \title{\bf{Classifying Roof Material From Drone Imagery} \\
  An Approach to the Open AI Caribbean Challenge}
@@ -30,7 +34,8 @@
 	This is why the possibilities of image processing for automatic recognition of vulnerable houses on the basis of drone imagery is explored. Such a technology could assist building inspectors and narrow down large areas to those that are worth a closer inspection on the ground. 
 	The material that roofs are made up of is a central indicator of how well a house is prepared against natural disasters. Therefore, classifying roof material from aerial images is a key step to identify precarious houses. \\
 	
-	The above background led to the initiation of the \textit{Open AI Caribbean Challenge: Mapping Disaster Risk from Aerial Imagery}, which was conducted in between October and December 2020 on \textit{drivendata.org}. This report describes an approach to solve this challenge.
+	The above background led to the initiation of the \textit{Open AI Caribbean Challenge: Mapping Disaster Risk from Aerial Imagery}, which was conducted in between October and December 2020 on \textit{drivendata.org}.	
+	 This report describes an approach to solve this challenge.
 	
 	\subsection{Literature Review}
 	
@@ -39,10 +44,12 @@
 	The identification of roof defects has been addressed in previous works, e.g. \cite{Yudin2018}, in which water stagnation on roofs is measured. Multiple patents such as (e.g. \cite{Shreve2017}) employ aerial images to evaluate damage on individual roofs for insurance purposes. To my best knowledge, academic works on roof material and condition classification from drone imagery on a large scale have not been published. 
 	
 	\section{Data Description}
+	
+	\subsection{Images}
+	
+	The data provided for the challenge consists of high resolution (~4cm) drone imagery of five patches of land: two from Soacha, Colombia, two from Mixco, Guatemala and one from Dennery (St. Lucia).
+	For every region, there is one stitched cloud-optimized GeoTIFF file, ranging from 500 to 1800 Megapixels in size.\\
 
-	-
-	
-	
 	\begin{center}
 		\begin{tabular}{ | m{5cm} | m{10cm}|} 
 			\hline
@@ -61,9 +68,30 @@
 		\end{tabular}
 	\end{center}
 	
+	\subsection{Labels}
 	
+	Roofs are labeled as one of five classes: 
 	
-	\subsection{Modality}
+	\begin{enumerate}
+		\itemsep0em
+		\item Concrete and Cement: Roofs made out of concrete or cement.
+		\item Healthy Metal: Roofs of metal that are intact but may be corrugated or galvanized.
+		\item Incomplete: Roofs that are severely damaged or under construction.
+		\item Irregular Metal: Roofs that are slightly damaged, rusted or patched.
+		\item Other: Roofs that do not fit into other categories (include tiles, red painted, other materials).
+	\end{enumerate}
+	
+	\begin{figure}
+	\begin{subfigure}[c]{0.5\textwidth}
+		
+		\includegraphics[width=0.25\textwidth]{figures/hm1.tif}
+		\subcaption{Subfigure Bild Nr. 1}
+		
+		\includegraphics[width=0.25\textwidth]{figures/hm1.tif}
+		\subcaption{Subfigure Bild Nr. 1}
+		
+	\end{subfigure}
+\end{figure}
 	
 	\subsection{Noise}
 	

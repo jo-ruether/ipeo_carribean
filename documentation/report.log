@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.10)  7 JAN 2020 15:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.10)  7 JAN 2020 17:33
 entering extended mode
 **./report.tex
 (report.tex
@@ -280,46 +280,11 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@dimlist=\toks22
 
 ("C:\Users\Johannes\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\geomet
-ry.cfg")) (report.aux)
-\openout1 = `report.aux'.
+ry.cfg"))
+("C:\Users\Johannes\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstop
+df.sty"
+Package: epstopdf 2016/05/15 v2.6 Conversion with epstopdf on the fly (HO)
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 20.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 20.
-
-("C:\Users\Johannes\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
-File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    ... okay on input line 20.
-Package caption Info: Begin \AtBeginDocument code.
-Package caption Info: End \AtBeginDocument code.
-
-("C:\Users\Johannes\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf
-.mkii"
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count106
-\scratchdimen=\dimen136
-\scratchbox=\box28
-\nofMPsegments=\count107
-\nofMParguments=\count108
-\everyMPshowfont=\toks23
-\MPscratchCnt=\count109
-\MPscratchDim=\dimen137
-\MPnumerator=\count110
-\makeMPintoPDFobject=\count111
-\everyMPtoPDFconversion=\toks24
-)
 ("C:\Users\Johannes\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstop
 df-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -377,6 +342,50 @@ Package grfext Info: Graphics extension search list:
 (grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
+))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps,.tif]
+(grfext)             \AppendGraphicsExtensions on input line 14.
+ (report.aux)
+\openout1 = `report.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 24.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 24.
+
+("C:\Users\Johannes\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
+File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 24.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+
+("C:\Users\Johannes\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf
+.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count106
+\scratchdimen=\dimen136
+\scratchbox=\box28
+\nofMPsegments=\count107
+\nofMParguments=\count108
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count109
+\MPscratchDim=\dimen137
+\MPnumerator=\count110
+\makeMPintoPDFobject=\count111
+\everyMPtoPDFconversion=\toks24
 )
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -413,24 +422,76 @@ G,.JBIG2,.JB2,.eps]
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 29--32
+Underfull \hbox (badness 10000) in paragraph at lines 33--36
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--38
+Underfull \hbox (badness 10000) in paragraph at lines 42--43
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 50--51
-\OT1/cmr/m/n/10.95 https://www.drivendata.org/competitions/58/disaster-
+Underfull \hbox (badness 10000) in paragraph at lines 50--52
+
  []
 
 [1
 
 {C:/Users/Johannes/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-(report.bbl [2]
+Underfull \hbox (badness 10000) in paragraph at lines 58--59
+\OT1/cmr/m/n/10.95 https://www.drivendata.org/competitions/58/disaster-
+ []
+
+Package epstopdf Info: Source file: <figures/hm1.tif>
+(epstopdf)                    date: 2019-11-17 17:42:06
+(epstopdf)                    size: 78147 bytes
+(epstopdf)             Output file: <figures/hm1-tif-converted-to.png>
+(epstopdf)             Command: <convert figures/hm1.tif figures/hm1-tif-conver
+ted-to.png>
+(epstopdf)             \includegraphics on input line 87.
+runsystem(convert figures/hm1.tif figures/hm1-tif-converted-to.png)...disabled 
+(restricted).
+
+Package epstopdf Info: Result file: <figures/hm1-tif-converted-to.png>.
+
+! Package pdftex.def Error: File `figures/hm1-tif-converted-to.png' not found: 
+using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.87 ...ics[width=0.25\textwidth]{figures/hm1.tif}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Package epstopdf Info: Source file: <figures/hm1.tif>
+(epstopdf)                    date: 2019-11-17 17:42:06
+(epstopdf)                    size: 78147 bytes
+(epstopdf)             Output file: <figures/hm1-tif-converted-to.png>
+(epstopdf)             Command: <convert figures/hm1.tif figures/hm1-tif-conver
+ted-to.png>
+(epstopdf)             \includegraphics on input line 90.
+runsystem(convert figures/hm1.tif figures/hm1-tif-converted-to.png)...disabled 
+(restricted).
+
+Package epstopdf Info: Result file: <figures/hm1-tif-converted-to.png>.
+
+! Package pdftex.def Error: File `figures/hm1-tif-converted-to.png' not found: 
+using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.90 ...ics[width=0.25\textwidth]{figures/hm1.tif}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[2] (report.bbl
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
@@ -439,22 +500,23 @@ Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
 ) [3] (report.aux) ) 
 Here is how much of TeX's memory you used:
- 4232 strings out of 493305
- 65680 string characters out of 3128497
- 123512 words of memory out of 3000000
- 7737 multiletter control sequences out of 15000+200000
- 10054 words of font info for 36 fonts, out of 3000000 for 9000
+ 4253 strings out of 493305
+ 66138 string characters out of 3128497
+ 124480 words of memory out of 3000000
+ 7752 multiletter control sequences out of 15000+200000
+ 10222 words of font info for 37 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,9n,40p,469b,207s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,9n,40p,469b,433s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/Johannes/AppData/Local/Programs/MiKTeX 2.9/fonts/
 type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Johannes/AppData/Local/Programs/M
 iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Johannes/AppData/L
 ocal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Joh
 annes/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.p
-fb>
-Output written on report.pdf (3 pages, 75556 bytes).
+fb><C:/Users/Johannes/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmtt10.pfb>
+Output written on report.pdf (3 pages, 87880 bytes).
 PDF statistics:
- 28 PDF objects out of 1000 (max. 8388607)
+ 32 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
