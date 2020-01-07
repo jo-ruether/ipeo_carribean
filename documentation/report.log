@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.10)  7 JAN 2020 12:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.10)  7 JAN 2020 14:48
 entering extended mode
 **./report.tex
 (report.tex
@@ -397,38 +397,38 @@ Underfull \hbox (badness 10000) in paragraph at lines 28--31
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 34--35
+Underfull \hbox (badness 10000) in paragraph at lines 36--37
 
  []
 
 [1
 
 {C:/Users/Johannes/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-(report.bbl
+(report.bbl [2]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
-) [2] (report.aux) ) 
+) [3] (report.aux) ) 
 Here is how much of TeX's memory you used:
- 4137 strings out of 493305
- 64374 string characters out of 3128497
+ 4140 strings out of 493305
+ 64428 string characters out of 3128497
  120767 words of memory out of 3000000
- 7648 multiletter control sequences out of 15000+200000
- 9214 words of font info for 33 fonts, out of 3000000 for 9000
+ 7651 multiletter control sequences out of 15000+200000
+ 10054 words of font info for 36 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,6n,40p,451b,189s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,6n,40p,469b,207s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/Johannes/AppData/Local/Programs/MiKTeX 2.9/fonts/
 type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Johannes/AppData/Local/Programs/M
 iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Johannes/AppData/L
 ocal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Joh
 annes/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.p
 fb>
-Output written on report.pdf (2 pages, 73823 bytes).
+Output written on report.pdf (3 pages, 75245 bytes).
 PDF statistics:
- 25 PDF objects out of 1000 (max. 8388607)
+ 28 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

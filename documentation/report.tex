@@ -10,7 +10,7 @@
 
 % Put your group number and names in the author field %
 \title{\bf{Classifying Roof Material From Drone Imagery} \\
- An Approach to the Open AI Carribean Challenge}
+ An Approach to the Open AI Caribbean Challenge}
 \author{Johannes Leonhard Ruether}
 
 
@@ -29,26 +29,43 @@
 	This is why the possibilities of image processing for automatic recognition of vulnerable houses on the basis of drone imagery is explored. Such a technology could assist building inspectors and narrow down large areas to those that are worth a closer inspection on the ground. 
 	The material that roofs are made up of is a central indicator of how well a house is prepared against natural disasters. Therefore, classifying roof material from aerial images is a key step to identify precarious houses. \\
 	
+	The above background led to the initiation of the \textit{Open AI Caribbean Challenge: Mapping Disaster Risk from Aerial Imagery}, which was conducted in between October and December 2020 on \textit{drivendata.org}. This report describes an approach to solve this challenge.
+	
 	\subsection{Literature Review}
 	
-	In many applications, the identification of roofs is considered useful. Roof segmentation is often done with LiDAR data, such as \cite{Chen2012} describes. \cite{Soman2019} has successfully attempted roof segmentation using only drone imagery, which is less costly. This task will become relevant for the described task. The approach discussed in this report however uses images of roofs that have already been segmented.\\
+	In many applications, the identification of roofs is considered useful. Roof segmentation is often done with LiDAR data, as presented in \cite{Chen2012}. Other papers such as \cite{Soman2019} have successfully attempted roof segmentation using only drone imagery, which is less costly. This step will become relevant for the task at hand. The approach discussed in this report however uses images of roofs that have already been segmented.\\
 	
-	Roof defect identification has been addressed in previous works such as \cite{Yudin2018}. They measure extent of damage
-	
-	 and in multiple patents (e.g. \cite{Shreve2017}). The scope 
-	
-	Best results were achieved with pretrained network 
-	
-	Identifying roof outlines from drone imagery has been attempted before with 
-	\cite{Soman2019}		
-	\cite{Yudin2018}
-	\cite{Shreve2017}
-		
-	short literature review (/!\ important that you looked at what has been done related to your project topic with remote sensing)
+	The identification of roof defects has been addressed in previous works, e.g. \cite{Yudin2018}, in which water stagnation on roofs is measured. Multiple patents such as (e.g. \cite{Shreve2017}) employ aerial images to evaluate damage on individual roofs for insurance purposes. To my best knowledge, academic works on roof material and condition classification from drone imagery on a large scale have not been published. 
 	
 	\section{Data Description}
 	
-		This report describes a solution approach to the online challenge \textit{Open AI Caribbean Challenge: Mapping Disaster Risk from Aerial Imagery} which was conducted in between October and December 2020 on \textit{drivendata.org}. It tackles the problem of classifying roof material from 
+	
+	
+	\begin{center}
+		\begin{tabular}{ |l|c| } 
+			\hline
+			Platform and sensor names & cell2  \\ 
+			\hline
+			source (including link) & cell5 \\ 
+			\hline
+			acquisition date \& method & cell8  \\ 
+			\hline
+			spatial reference system (i.e. projection, ellipsoid, geoid) & cell8  \\ 
+			\hline
+			spatial/spectral/radiometric resolution and accuracy & cell8  \\ 
+			\hline
+			type of product (e.g. composite, raw, processed)& cell8  \\ 
+			\hline
+		\end{tabular}
+	\end{center}
+	
+	
+	
+	\subsection{Modality}
+	
+	\subsection{Noise}
+	
+		 It tackles the problem of classifying roof material from 
 	
 	What was given, footprints etc.
 	
