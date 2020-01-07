@@ -19,7 +19,67 @@
 \begin{document}
 	\maketitle
 	
-	\section{Solution Representation}
+	\section{Introduction (Context and Challenges)}
 	
+	\subsection{Context}
+	
+	Regions like the Carribean are regularly hit by rainstorms, floods or earthquakes. Despite being so prone, many houses in those areas are unable to withstand these natural hazards due to poor construction quality. This exposes their inhabitants to a great risk of becoming homeless during the next disaster. 
+	
+	International programs as the World Bank's Global Program for Resilient Housing are making attempts to retrofit houses to the natural forces they are exposed to. In these large and often informal settlements it is difficult to assess which houses pose especially high risks due to their construction or are damaged and need repair. Exploring these areas on the ground is time consuming and costly. 
+	This is why the possibilities of image processing for automatic recognition of vulnerable houses on the basis of drone imagery is explored. Such a technology could assist building inspectors and narrow down large areas to those that are worth a closer inspection on the ground. 
+	The material that roofs are made up of is a central indicator of how well a house is prepared against natural disasters. Therefore, classifying roof material from aerial images is a key step to identify precarious houses. \\
+	
+	\subsection{Literature Review}
+	
+	In many applications, the identification of roofs is considered useful. Roof segmentation is often done with LiDAR data, such as \cite{Chen2012} describes. \cite{Soman2019} has successfully attempted roof segmentation using only drone imagery, which is less costly. This task will become relevant for the described task. The approach discussed in this report however uses images of roofs that have already been segmented.\\
+	
+	Roof defect identification has been addressed in previous works such as \cite{Yudin2018}. They measure extent of damage
+	
+	 and in multiple patents (e.g. \cite{Shreve2017}). The scope 
+	
+	Best results were achieved with pretrained network 
+	
+	Identifying roof outlines from drone imagery has been attempted before with 
+	\cite{Soman2019}		
+	\cite{Yudin2018}
+	\cite{Shreve2017}
+		
+	short literature review (/!\ important that you looked at what has been done related to your project topic with remote sensing)
+	
+	\section{Data Description}
+	
+		This report describes a solution approach to the online challenge \textit{Open AI Caribbean Challenge: Mapping Disaster Risk from Aerial Imagery} which was conducted in between October and December 2020 on \textit{drivendata.org}. It tackles the problem of classifying roof material from 
+	
+	What was given, footprints etc.
+	
+	- Include a table describing the data you are using:
+	* platform and sensor names \\
+	* source (including link) \\
+	* acquisition date \& method \\
+	* spatial reference system (i.e. projection, ellipsoid, geoid) \\
+	* spatial/spectral/radiometric resolution and accuracy \\
+	* vertical resolution and accuracy for DEMs \\
+	* type of product (e.g. composite, raw, processed) 
+	
+	\section{Proposed Processing Routine}
+	includes flowchart
+	
+	\section{Results}
+	Results qualitative (e.g. maps) and quantitative (e.g. accuracies, statistics). /!\ This implies that you have either access to groundtruth data or digitized/photointerpreted some areas in order to compute accuracies.
+	
+	\section{Discussion}
+	Discussion where you are critical about what has been done and what could be further explored. You have investigated a topic and achieving your initial goal is not always possible in a fixed time frame, however you should be able to assess your situation and what should then be done/improved in order to reach your goal.
+	
+	\section{Appendix}
+	APPENDIX: Include your scripts (Matlab, GoogleEarthEngine or others) and the specific functions you used in QGIS (if applicable)
+	*Include a descriptive header on your different scripts
+	* Comment your code, use indentation and spacing
+	* Only keep the code you used for your latest results
+	
+	
+	
+	\bibliography{ipeo} 
+	
+	\bibliographystyle{ieeetr}
 
 \end{document}

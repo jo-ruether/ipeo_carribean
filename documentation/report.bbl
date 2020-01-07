@@ -1,0 +1,23 @@
+\begin{thebibliography}{1}
+
+\bibitem{Chen2012}
+D.~Chen, L.~Zhang, J.~Li, and R.~Liu, ``Urban building roof segmentation from
+  airborne lidar point clouds,'' {\em International Journal of Remote Sensing},
+  vol.~33, no.~20, pp.~6497--6515, 2012.
+
+\bibitem{Soman2019}
+K.~Soman, ``Rooftop detection using aerial drone imagery,'' in {\em Proceedings
+  of the ACM India Joint International Conference on Data Science and
+  Management of Data}, CoDS-COMAD ’19, (New York, NY, USA), p.~281–284,
+  Association for Computing Machinery, 2019.
+
+\bibitem{Yudin2018}
+D.~Yudin, A.~Naumov, A.~Dolzhenko, and E.~Patrakova, ``Software for roof
+  defects recognition on aerial photographs,'' {\em Journal of Physics:
+  Conference Series}, vol.~1015, p.~032152, may 2018.
+
+\bibitem{Shreve2017}
+E.~A.~B. Matthew A.~Shreve, ``Image segmentation system for verification of
+  property roof damage, us patent 20170352100a1,'' 2017.
+
+\end{thebibliography}
