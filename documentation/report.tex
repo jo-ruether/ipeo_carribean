@@ -1,6 +1,7 @@
 \documentclass[11pt]{article}
 
 \usepackage{amsmath}
+\usepackage{tabularx}
 \usepackage{subcaption} 
 \usepackage{textcomp}
 \usepackage{caption}
@@ -38,23 +39,24 @@
 	The identification of roof defects has been addressed in previous works, e.g. \cite{Yudin2018}, in which water stagnation on roofs is measured. Multiple patents such as (e.g. \cite{Shreve2017}) employ aerial images to evaluate damage on individual roofs for insurance purposes. To my best knowledge, academic works on roof material and condition classification from drone imagery on a large scale have not been published. 
 	
 	\section{Data Description}
-	
+
+	-
 	
 	
 	\begin{center}
-		\begin{tabular}{ |l|c| } 
+		\begin{tabular}{ | m{5cm} | m{10cm}|} 
 			\hline
-			Platform and sensor names & cell2  \\ 
+			Platform & WeRobotics (private drone)  \\ 
 			\hline
-			source (including link) & cell5 \\ 
+			Source & DrivenData Competition \newline https://www.drivendata.org/competitions/58/disaster-response-roof-type/data/ \\ 
 			\hline
-			acquisition date \& method & cell8  \\ 
+			Acquisition Method & Drone Photography  \\ 
 			\hline
-			spatial reference system (i.e. projection, ellipsoid, geoid) & cell8  \\ 
+			SRS  & Ellipsoid (EPSG:32616, 32618, 326120)  \\ 
 			\hline
-			spatial/spectral/radiometric resolution and accuracy & cell8  \\ 
+			Spatial/Spectral resolution & 3.8-4.5cm, RGB  \\ 
 			\hline
-			type of product (e.g. composite, raw, processed)& cell8  \\ 
+			Type of Product & Cloud-optimized GeoTIFF \\ 
 			\hline
 		\end{tabular}
 	\end{center}
@@ -68,15 +70,6 @@
 		 It tackles the problem of classifying roof material from 
 	
 	What was given, footprints etc.
-	
-	- Include a table describing the data you are using:
-	* platform and sensor names \\
-	* source (including link) \\
-	* acquisition date \& method \\
-	* spatial reference system (i.e. projection, ellipsoid, geoid) \\
-	* spatial/spectral/radiometric resolution and accuracy \\
-	* vertical resolution and accuracy for DEMs \\
-	* type of product (e.g. composite, raw, processed) 
 	
 	\section{Proposed Processing Routine}
 	includes flowchart
