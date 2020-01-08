@@ -191,31 +191,31 @@
 		\label{fig:flowchart}
 	\end{figure}
 
-	\subsection{Pixel-based Baseline }
-	As a baseline for comparison, several statistical metrics were extracted as features and classified with a SVM. 
+	\subsection{Pixel-based Baseline } 
+	As a baseline for comparison, several statistical metrics are extracted as features and classified with a SVM. The mean is used to assess the dominant colors on a roof. Heterogeneity is tried to measure using the standard deviation and range of every image. Every metric is calculated on every color channel and on the absolute of the Sobel-filtered image in x- and y-direction of every color channel (see Fig.~\ref{fig:pixel_based}). This results in a 18-dimensional feature vector (3 metrics $\times$ 3 channels on original and gradient image).
+	
 	\begin{figure}
 		\centering
-		\begin{subfigure}[b]{.4\textwidth}
+		\begin{subfigure}[t]{\textwidth}
 			\centering
-			\includegraphics[width=\textwidth,height=5cm]{figures/pixel_based/rgb.png}
-			\subcaption{Original RGB Image}	
-		\end{subfigure}\qquad
-		\begin{subfigure}[b]{.55\textwidth}
-			\includegraphics[width=\textwidth, trim={3.5cm 0 3cm 0}, clip]{figures/pixel_based/rgb_channels.png}
-			\subcaption{Individual Channels}
-			
-			\vspace{2ex}
-			
-			\includegraphics[width=\textwidth, trim={3.5cm 0 3cm 0}, clip]{figures/pixel_based/sobel.png}
-			\subcaption{Sobel}
+			\includegraphics[width=\textwidth, trim={3cm 3cm 3cm 3cm},clip]{figures/pixel_based/rgb_channels.png}
+			\subcaption{RGB Image and individual color channels}
 		\end{subfigure}
-		\caption{pixel}
+		\begin{subfigure}[b]{.8\textwidth}
+			\includegraphics[width=.95\textwidth, trim={2cm 1.5cm 2cm 1.5cm},clip]{figures/pixel_based/sobel.png}
+			\subcaption{Derivative images (absolute of Sobel-filtered images in x- and y-direction)}
+		\end{subfigure}
+		\caption{Original image classified as "other" with red, green and blue individual channels (top row). \\ Gradient images of each channel (bottom row)}
 		\label{fig:pixel_based}
 	\end{figure}
 	
-
-	
 	\section{Results}
+	
+	One example confusion matrix for NN and PB
+	
+	Accuracy and F1-score
+	
+	Map with colored rectangles indicating roof security
 	
 	The proposed processing routine was designed to achieve good results in terms of log-loss.
 	
@@ -223,6 +223,7 @@
 	
 	
 	Results qualitative (e.g. maps) and quantitative (e.g. accuracies, statistics). /!\ This implies that you have either access to groundtruth data or digitized/photointerpreted some areas in order to compute accuracies.
+	
 	
 	\section{Discussion}
 	\label{sec:discussion}
