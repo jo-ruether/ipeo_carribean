@@ -165,9 +165,30 @@
 
 	
 	\section{Proposed Processing Routine}
-	includes flowchart
+	
+	\subsection{Petrained Neural Network as Feature Extractor}		
+	The proposed processing routine uses a pretrained neural network as feature extractor.
+	Natural images 
+	
+	Parameters
+	
+	The employed pretrained architectures were trained images from the ImageNet database ~\cite{imagenet}. 
+	
+	\begin{figure}
+		\centering		
+		\includegraphics[width=0.8\textwidth]{figures/flowchart.pdf}
+		\label{fig:flowchart}
+		\caption{Proposed processing routine: The classification part of a pretrained neural network is removed, leaving the feature extraction. A SVM or RF is used to build a model out of the training features and the groundtruth labels in an iterative process. Test features are fed into this model to predict labels and determine prediction confidence.}
+	\end{figure}
+
+	\subsection{Pixel-based Baseline Method}
+	As a baseline for comparison, several statistical metrics were extracted as features and classified with a SVM.
+	
 	
 	\section{Results}
+	
+	
+	
 	Results qualitative (e.g. maps) and quantitative (e.g. accuracies, statistics). /!\ This implies that you have either access to groundtruth data or digitized/photointerpreted some areas in order to compute accuracies.
 	
 	\section{Discussion}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.10)  8 JAN 2020 09:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.10)  8 JAN 2020 11:07
 entering extended mode
 **./report.tex
 (report.tex
@@ -541,6 +541,11 @@ File: figures/wrong_labels/inc_holes.png Graphic file (type png)
 Package pdftex.def Info: figures/wrong_labels/inc_holes.png  used on input line
  159.
 (pdftex.def)             Requested size: 143.61285pt x 80.23193pt.
+<figures/flowchart.pdf, id=39, 551.1792pt x 298.23419pt>
+File: figures/flowchart.pdf Graphic file (type pdf)
+<use figures/flowchart.pdf>
+Package pdftex.def Info: figures/flowchart.pdf  used on input line 179.
+(pdftex.def)             Requested size: 398.93158pt x 215.86157pt.
  [3 <./figures/wrong_labels/hm_rusty.png> <./figures/wrong_labels/irr_rusty.png
 > <./figures/wrong_labels/hm_should_be_conc.png> <./figures/wrong_labels/irr_ho
 les.png> <./figures/wrong_labels/inc_holes.png>] (report.bbl
@@ -550,25 +555,29 @@ Missing character: There is no ™ in font cmr10!
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
-) [4] (report.aux) ) 
+ [4 <./figures/flowchart.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures/flowchart.pdf): PDF inclusion: inv
+alid other resource which is no dict (key 'ProcSets', type <array>); ignored.
+>]) [5] (report.aux) ) 
 Here is how much of TeX's memory you used:
- 4332 strings out of 493305
- 68551 string characters out of 3128497
+ 4340 strings out of 493305
+ 68724 string characters out of 3128497
  126480 words of memory out of 3000000
- 7816 multiletter control sequences out of 15000+200000
+ 7822 multiletter control sequences out of 15000+200000
  10362 words of font info for 37 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,9n,40p,469b,447s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/Johannes/AppData/Local/Programs/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Johannes/AppData/Local/Programs/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Johannes/AppData/
-Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Jo
-hannes/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.p
-fb><C:/Users/Johannes/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmti10.pfb>
-Output written on report.pdf (4 pages, 2048325 bytes).
+<C:/Users/Johannes/AppData/Local/Programs/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Johannes/AppData/Local/Programs
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Johannes/AppDat
+a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/
+Johannes/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12
+.pfb><C:/Users/Johannes/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmti10.pfb>
+Output written on report.pdf (5 pages, 2078740 bytes).
 PDF statistics:
- 66 PDF objects out of 1000 (max. 8388607)
+ 85 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 76 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 81 words of extra memory for PDF output out of 10000 (max. 10000000)
 

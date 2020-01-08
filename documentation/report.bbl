@@ -20,4 +20,10 @@ D.~Yudin, A.~Naumov, A.~Dolzhenko, and E.~Patrakova, ``Software for roof
 E.~A.~B. Matthew A.~Shreve, ``Image segmentation system for verification of
   property roof damage, us patent 20170352100a1,'' 2017.
 
+\bibitem{imagenet}
+O.~Russakovsky, J.~Deng, H.~Su, J.~Krause, S.~Satheesh, S.~Ma, Z.~Huang,
+  A.~Karpathy, A.~Khosla, M.~Bernstein, {\em et~al.}, ``Imagenet large scale
+  visual recognition challenge,'' {\em International journal of computer
+  vision}, vol.~115, no.~3, pp.~211--252, 2015.
+
 \end{thebibliography}

@@ -1,6 +1,35 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import matplotlib
+import rasterio
+from os.path import dirname, join
+
+def thumbnail(image_fp, dec_factor=32):
+    """
+    Creates a thumbnail of a CO-GeoTIFF in the same folder and stores it as png.
+
+    Parameters
+    ----------
+    image_fp
+        path to the CO-GeoTIFF
+    dec_factor
+        decimation factor, factor by which the image should be shrinked
+    """
+
+    with rasterio.open(image_fp) as src:
+        print('Decimation factor = {}'.format(dec_factor))
+        new_height = int(src.height // dec_factor)
+        new_width = int(src.width // dec_factor)
+
+        b, g, r = (src.read(k, out_shape=(1, new_height, new_width)) for k in (1, 2, 3))
+
+    # Retrieve name of folder that image is stored in
+    dir = dirname(image_fp)
+    with rasterio.open(join(dir, 'thumbnail.png'), 'w',
+            driver='GTiff', width=r.shape[1], height=r.shape[0], count=3,
+            dtype=r.dtype) as dst:
+        for k, arr in [(1, b), (2, g), (3, r)]:
+            dst.write(arr, indexes=k)
 
 def heatmap(data, row_labels, col_labels, ax=None,
             cbar_kw={}, cbarlabel="", **kwargs):
