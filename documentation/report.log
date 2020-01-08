@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.10)  8 JAN 2020 19:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.10)  8 JAN 2020 20:09
 entering extended mode
 **./report.tex
 (report.tex
@@ -451,101 +451,101 @@ Underfull \hbox (badness 10000) in paragraph at lines 72--73
 <figures/mat_examples/conc1.png, id=12, 436.63126pt x 497.86pt>
 File: figures/mat_examples/conc1.png Graphic file (type png)
 <use figures/mat_examples/conc1.png>
-Package pdftex.def Info: figures/mat_examples/conc1.png  used on input line 107
+Package pdftex.def Info: figures/mat_examples/conc1.png  used on input line 105
 .
 (pdftex.def)             Requested size: 75.00075pt x 85.5163pt.
 <figures/mat_examples/conc2.png, id=13, 256.96pt x 265.99374pt>
 File: figures/mat_examples/conc2.png Graphic file (type png)
 <use figures/mat_examples/conc2.png>
-Package pdftex.def Info: figures/mat_examples/conc2.png  used on input line 108
+Package pdftex.def Info: figures/mat_examples/conc2.png  used on input line 106
 .
 (pdftex.def)             Requested size: 75.00075pt x 77.63542pt.
 <figures/mat_examples/hm1.png, id=14, 246.9225pt x 249.93375pt>
 File: figures/mat_examples/hm1.png Graphic file (type png)
 <use figures/mat_examples/hm1.png>
-Package pdftex.def Info: figures/mat_examples/hm1.png  used on input line 112.
+Package pdftex.def Info: figures/mat_examples/hm1.png  used on input line 110.
 (pdftex.def)             Requested size: 75.00075pt x 75.91505pt.
 <figures/mat_examples/hm2.png, id=15, 199.74625pt x 184.69pt>
 File: figures/mat_examples/hm2.png Graphic file (type png)
 <use figures/mat_examples/hm2.png>
-Package pdftex.def Info: figures/mat_examples/hm2.png  used on input line 113.
+Package pdftex.def Info: figures/mat_examples/hm2.png  used on input line 111.
 (pdftex.def)             Requested size: 75.00075pt x 69.34593pt.
 <figures/mat_examples/inc1.png, id=16, 331.2375pt x 225.84375pt>
 File: figures/mat_examples/inc1.png Graphic file (type png)
 <use figures/mat_examples/inc1.png>
-Package pdftex.def Info: figures/mat_examples/inc1.png  used on input line 117.
+Package pdftex.def Info: figures/mat_examples/inc1.png  used on input line 115.
 
 (pdftex.def)             Requested size: 75.00075pt x 51.13658pt.
 <figures/mat_examples/inc2.png, id=17, 330.23375pt x 278.03876pt>
 File: figures/mat_examples/inc2.png Graphic file (type png)
 <use figures/mat_examples/inc2.png>
-Package pdftex.def Info: figures/mat_examples/inc2.png  used on input line 118.
+Package pdftex.def Info: figures/mat_examples/inc2.png  used on input line 116.
 
 (pdftex.def)             Requested size: 75.00075pt x 63.14572pt.
 <figures/mat_examples/irr1.png, id=18, 217.81375pt x 181.67876pt>
 File: figures/mat_examples/irr1.png Graphic file (type png)
 <use figures/mat_examples/irr1.png>
-Package pdftex.def Info: figures/mat_examples/irr1.png  used on input line 122.
+Package pdftex.def Info: figures/mat_examples/irr1.png  used on input line 120.
 
 (pdftex.def)             Requested size: 51.06537pt x 42.59193pt.
 <figures/mat_examples/irr2.png, id=19, 105.39375pt x 173.64874pt>
 File: figures/mat_examples/irr2.png Graphic file (type png)
 <use figures/mat_examples/irr2.png>
-Package pdftex.def Info: figures/mat_examples/irr2.png  used on input line 123.
+Package pdftex.def Info: figures/mat_examples/irr2.png  used on input line 121.
 
 (pdftex.def)             Requested size: 51.06537pt x 84.13739pt.
 <figures/mat_examples/other1.png, id=20, 113.42375pt x 130.4875pt>
 File: figures/mat_examples/other1.png Graphic file (type png)
 <use figures/mat_examples/other1.png>
 Package pdftex.def Info: figures/mat_examples/other1.png  used on input line 12
-8.
+6.
 (pdftex.def)             Requested size: 55.85245pt x 64.25401pt.
 <figures/mat_examples/other2.png, id=21, 710.655pt x 666.49pt>
 File: figures/mat_examples/other2.png Graphic file (type png)
 <use figures/mat_examples/other2.png>
 Package pdftex.def Info: figures/mat_examples/other2.png  used on input line 12
-9.
+7.
 (pdftex.def)             Requested size: 71.80856pt x 67.34445pt.
 [2 <./figures/thumbnail_dennery.png>]
 <figures/wrong_labels/hm_rusty.png, id=26, 284.06125pt x 313.17pt>
 File: figures/wrong_labels/hm_rusty.png Graphic file (type png)
 <use figures/wrong_labels/hm_rusty.png>
 Package pdftex.def Info: figures/wrong_labels/hm_rusty.png  used on input line 
-153.
+151.
 (pdftex.def)             Requested size: 111.3008pt x 122.70445pt.
 <figures/wrong_labels/irr_rusty.png, id=27, 273.02pt x 291.0875pt>
 File: figures/wrong_labels/irr_rusty.png Graphic file (type png)
 <use figures/wrong_labels/irr_rusty.png>
 Package pdftex.def Info: figures/wrong_labels/irr_rusty.png  used on input line
- 158.
+ 156.
 (pdftex.def)             Requested size: 111.3008pt x 118.66707pt.
 <figures/wrong_labels/hm_should_be_conc.png, id=28, 210.7875pt x 144.54pt>
 File: figures/wrong_labels/hm_should_be_conc.png Graphic file (type png)
 <use figures/wrong_labels/hm_should_be_conc.png>
 Package pdftex.def Info: figures/wrong_labels/hm_should_be_conc.png  used on in
-put line 163.
+put line 161.
 (pdftex.def)             Requested size: 139.12482pt x 95.4011pt.
 <figures/wrong_labels/irr_holes.png, id=29, 244.66406pt x 124.96687pt>
 File: figures/wrong_labels/irr_holes.png Graphic file (type png)
 <use figures/wrong_labels/irr_holes.png>
 Package pdftex.def Info: figures/wrong_labels/irr_holes.png  used on input line
- 169.
+ 167.
 (pdftex.def)             Requested size: 133.63914pt x 68.2591pt.
 <figures/wrong_labels/inc_holes.png, id=30, 269.50688pt x 150.5625pt>
 File: figures/wrong_labels/inc_holes.png Graphic file (type png)
 <use figures/wrong_labels/inc_holes.png>
 Package pdftex.def Info: figures/wrong_labels/inc_holes.png  used on input line
- 174.
+ 172.
 (pdftex.def)             Requested size: 143.61285pt x 80.23193pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 186--189
+Underfull \hbox (badness 10000) in paragraph at lines 184--187
 
  []
 
 <figures/flowchart.pdf, id=31, 558.16531pt x 298.23419pt>
 File: figures/flowchart.pdf Graphic file (type pdf)
 <use figures/flowchart.pdf>
-Package pdftex.def Info: figures/flowchart.pdf  used on input line 196.
+Package pdftex.def Info: figures/flowchart.pdf  used on input line 194.
 (pdftex.def)             Requested size: 398.93158pt x 213.15392pt.
 [3 <./figures/mat_examples/conc1.png> <./figures/mat_examples/conc2.png> <./fig
 ures/mat_examples/hm1.png> <./figures/mat_examples/hm2.png> <./figures/mat_exam
@@ -563,46 +563,46 @@ alid other resource which is no dict (key 'ProcSets', type <array>); ignored.
 File: figures/pixel_based/rgb_channels.png Graphic file (type png)
 <use figures/pixel_based/rgb_channels.png>
 Package pdftex.def Info: figures/pixel_based/rgb_channels.png  used on input li
-ne 208.
+ne 206.
 (pdftex.def)             Requested size: 498.66258pt x 96.45094pt.
 <figures/pixel_based/sobel.png, id=70, 1156.32pt x 361.35pt>
 File: figures/pixel_based/sobel.png Graphic file (type png)
 <use figures/pixel_based/sobel.png>
-Package pdftex.def Info: figures/pixel_based/sobel.png  used on input line 212.
+Package pdftex.def Info: figures/pixel_based/sobel.png  used on input line 210.
 
 (pdftex.def)             Requested size: 378.98378pt x 100.32977pt.
-<figures/results/pixel_based_cm.png, id=72, 614.295pt x 614.295pt>
+ [5 <./figures/pixel_based/rgb_channels.png> <./figures/pixel_based/sobel.png>]
+<figures/results/pixel_based_cm.png, id=80, 614.295pt x 614.295pt>
 File: figures/results/pixel_based_cm.png Graphic file (type png)
 <use figures/results/pixel_based_cm.png>
 Package pdftex.def Info: figures/results/pixel_based_cm.png  used on input line
- 254.
+ 279.
 (pdftex.def)             Requested size: 224.39662pt x 224.39859pt.
-<figures/results/nn_based_cm.png, id=73, 614.295pt x 614.295pt>
+<figures/results/nn_based_cm.png, id=81, 614.295pt x 614.295pt>
 File: figures/results/nn_based_cm.png Graphic file (type png)
 <use figures/results/nn_based_cm.png>
-Package pdftex.def Info: figures/results/nn_based_cm.png  used on input line 25
-9.
+Package pdftex.def Info: figures/results/nn_based_cm.png  used on input line 28
+4.
 (pdftex.def)             Requested size: 224.39662pt x 224.39859pt.
 
-Overfull \hbox (2.43332pt too wide) in paragraph at lines 252--262
+Overfull \hbox (2.43332pt too wide) in paragraph at lines 277--287
 [][] [] 
  []
 
-[5 <./figures/pixel_based/rgb_channels.png> <./figures/pixel_based/sobel.png>]
-(report.bbl
+(report.bbl [6 <./figures/results/pixel_based_cm.png> <./figures/results/nn_bas
+ed_cm.png>]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
- [6 <./figures/results/pixel_based_cm.png> <./figures/results/nn_based_cm.png>]
 ) [7] (report.aux) ) 
 Here is how much of TeX's memory you used:
- 4378 strings out of 493305
- 69716 string characters out of 3128497
+ 4379 strings out of 493305
+ 69738 string characters out of 3128497
  128480 words of memory out of 3000000
- 7853 multiletter control sequences out of 15000+200000
+ 7854 multiletter control sequences out of 15000+200000
  10362 words of font info for 37 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,9n,40p,616b,447s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -614,7 +614,7 @@ hannes/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.p
 fb><C:/Users/Johannes/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsf
 onts/cm/cmsy10.pfb><C:/Users/Johannes/AppData/Local/Programs/MiKTeX 2.9/fonts/t
 ype1/public/amsfonts/cm/cmti10.pfb>
-Output written on report.pdf (7 pages, 5186626 bytes).
+Output written on report.pdf (7 pages, 5168447 bytes).
 PDF statistics:
  111 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

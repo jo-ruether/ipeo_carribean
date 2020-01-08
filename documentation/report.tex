@@ -87,17 +87,15 @@
 	
 	\subsection{Labels}
 	
-	\textbf{HOWMANYOFEACHCLASS}
-	
 	Roofs are labeled as one of five classes, examples of which are given in Fig.~\ref{fig:mat_examples}: 
 	
 	\begin{enumerate}
 		\itemsep0em
-		\item Concrete and Cement: Roofs made out of concrete or cement.
-		\item Healthy Metal: Roofs of metal that are intact but may be corrugated or galvanized.
-		\item Incomplete: Roofs that are severely damaged or under construction.
-		\item Irregular Metal: Roofs that are slightly damaged, rusted or patched.
-		\item Other: Roofs that do not fit into other categories (include tiles, red painted, other materials).
+		\item Concrete and Cement (1385 training samples): Roofs made out of concrete or cement.
+		\item Healthy Metal (7370): Roofs of metal that are intact but may be corrugated or galvanized.
+		\item Incomplete (668): Roofs that are severely damaged or under construction.
+		\item Irregular Metal (5236): Roofs that are slightly damaged, rusted or patched.
+		\item Other (193): Roofs that do not fit into other categories (include tiles, red painted, other materials).
 	\end{enumerate}
 
 	\begin{figure}
@@ -218,7 +216,34 @@
 	
 	\section{Results}
 	
-	Cross validated results
+	Best results obtained with average pooling instead of Max
+	All with SVM, C=100
+	
+	More data was better -> no improvement when handpicking because test set was noisy as well.
+	
+	\begin{center}
+		\bgroup
+		\def\arraystretch{1.1}
+		\begin{tabular}{ | m{5cm} | m{2cm} | } 
+			
+			\hline
+			Pretrained model & Log-loss \\
+			\hline
+			\hline
+			ResNet50 & 0.5554 \\
+			\hline
+			InceptionV3 & 0.5917\\
+			\hline
+			DenseNet201 & 0.5800\\
+			\hline
+			VGG16 & 0.6152\\
+			\hline
+		\end{tabular}
+		\egroup
+		\captionof{table}{Log-loss on online challenge test set for feature extraction with different pretrained models. Classification was always performed with an SVM.} 
+		\label{tab:model_comparison}
+	\end{center}
+	
 	
 	\begin{center}
 		\bgroup
