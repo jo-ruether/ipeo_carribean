@@ -192,8 +192,28 @@
 	\end{figure}
 
 	\subsection{Pixel-based Baseline }
-	As a baseline for comparison, several statistical metrics were extracted as features and classified with a SVM.
+	As a baseline for comparison, several statistical metrics were extracted as features and classified with a SVM. 
+	\begin{figure}
+		\centering
+		\begin{subfigure}[b]{.4\textwidth}
+			\centering
+			\includegraphics[width=\textwidth,height=5cm]{figures/pixel_based/rgb.png}
+			\subcaption{Original RGB Image}	
+		\end{subfigure}\qquad
+		\begin{subfigure}[b]{.55\textwidth}
+			\includegraphics[width=\textwidth, trim={3.5cm 0 3cm 0}, clip]{figures/pixel_based/rgb_channels.png}
+			\subcaption{Individual Channels}
+			
+			\vspace{2ex}
+			
+			\includegraphics[width=\textwidth, trim={3.5cm 0 3cm 0}, clip]{figures/pixel_based/sobel.png}
+			\subcaption{Sobel}
+		\end{subfigure}
+		\caption{pixel}
+		\label{fig:pixel_based}
+	\end{figure}
 	
+
 	
 	\section{Results}
 	

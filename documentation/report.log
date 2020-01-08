@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.10)  8 JAN 2020 14:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.10)  8 JAN 2020 15:24
 entering extended mode
 **./report.tex
 (report.tex
@@ -552,6 +552,23 @@ File: figures/flowchart.pdf Graphic file (type pdf)
 <use figures/flowchart.pdf>
 Package pdftex.def Info: figures/flowchart.pdf  used on input line 189.
 (pdftex.def)             Requested size: 398.93158pt x 213.15392pt.
+<figures/pixel_based/rgb.png, id=32, 433.62pt x 289.08pt>
+File: figures/pixel_based/rgb.png Graphic file (type png)
+<use figures/pixel_based/rgb.png>
+Package pdftex.def Info: figures/pixel_based/rgb.png  used on input line 200.
+(pdftex.def)             Requested size: 199.461pt x 142.26357pt.
+<figures/pixel_based/rgb_channels.png, id=33, 1156.32pt x 361.35pt>
+File: figures/pixel_based/rgb_channels.png Graphic file (type png)
+<use figures/pixel_based/rgb_channels.png>
+Package pdftex.def Info: figures/pixel_based/rgb_channels.png  used on input li
+ne 204.
+(pdftex.def)             Requested size: 274.26593pt x 102.02643pt.
+<figures/pixel_based/sobel.png, id=35, 1156.32pt x 361.35pt>
+File: figures/pixel_based/sobel.png Graphic file (type png)
+<use figures/pixel_based/sobel.png>
+Package pdftex.def Info: figures/pixel_based/sobel.png  used on input line 209.
+
+(pdftex.def)             Requested size: 274.26593pt x 102.02643pt.
 [3 <./figures/mat_examples/conc1.png> <./figures/mat_examples/conc2.png> <./fig
 ures/mat_examples/hm1.png> <./figures/mat_examples/hm2.png> <./figures/mat_exam
 ples/inc1.png> <./figures/mat_examples/inc2.png> <./figures/mat_examples/irr1.p
@@ -563,32 +580,33 @@ ures/wrong_labels/irr_rusty.png> <./figures/wrong_labels/hm_should_be_conc.png>
 
 pdfTeX warning: pdflatex.exe (file ./figures/flowchart.pdf): PDF inclusion: inv
 alid other resource which is no dict (key 'ProcSets', type <array>); ignored.
->] (report.bbl
+>] (report.bbl [5 <./figures/pixel_based/rgb_channels.png> <./figures/pixel_bas
+ed/sobel.png> <./figures/pixel_based/rgb.png>]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
- [5]) [6] (report.aux) ) 
+) [6] (report.aux) ) 
 Here is how much of TeX's memory you used:
- 4350 strings out of 493305
- 68939 string characters out of 3128497
- 127480 words of memory out of 3000000
- 7831 multiletter control sequences out of 15000+200000
+ 4367 strings out of 493305
+ 69433 string characters out of 3128497
+ 128480 words of memory out of 3000000
+ 7844 multiletter control sequences out of 15000+200000
  10362 words of font info for 37 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,9n,40p,616b,447s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/Johannes/AppData/Local/Programs/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Johannes/AppData/Local/Progra
-ms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Johannes/AppD
-ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/User
-s/Johannes/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr
-12.pfb><C:/Users/Johannes/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmti10.pfb>
-Output written on report.pdf (6 pages, 4843317 bytes).
+ 42i,9n,40p,616b,449s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/Johannes/AppData/Local/Programs/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Johannes/AppData/Local/Programs/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Johannes/AppData/
+Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Jo
+hannes/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.p
+fb><C:/Users/Johannes/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmti10.pfb>
+Output written on report.pdf (6 pages, 5176593 bytes).
 PDF statistics:
- 90 PDF objects out of 1000 (max. 8388607)
+ 100 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 86 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 113 words of extra memory for PDF output out of 10000 (max. 10000000)
 
