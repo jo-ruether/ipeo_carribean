@@ -59,18 +59,22 @@ def heatmap(data, row_labels, col_labels, ax=None,
         ax = plt.gca()
 
     # Plot the heatmap
-    im = ax.imshow(data, **kwargs)
+    im = ax.imshow(data, **kwargs, vmin=0, vmax=1)
 
     # Create colorbar
-    cbar = ax.figure.colorbar(im, ax=ax, **cbar_kw)
+    cbar = ax.figure.colorbar(im, ax=ax, **cbar_kw, fraction=0.046, pad=0.04)
     cbar.ax.set_ylabel(cbarlabel, rotation=-90, va="bottom")
 
     # We want to show all ticks...
     ax.set_xticks(np.arange(data.shape[1]))
     ax.set_yticks(np.arange(data.shape[0]))
     # ... and label them with the respective list entries.
-    ax.set_xticklabels(col_labels)
-    ax.set_yticklabels(row_labels)
+    ax.set_xticklabels(col_labels, fontsize=12)
+    ax.set_yticklabels(row_labels, fontsize=12)
+    
+    #
+    ax.set_ylabel('True labels', fontsize=16)
+    ax.set_xlabel('Predicted labels', fontsize=16)
 
     # Let the horizontal axes labeling appear on top.
     ax.tick_params(top=True, bottom=False,
