@@ -3,6 +3,32 @@ import numpy as np
 import matplotlib
 import rasterio
 from os.path import dirname, join
+from sklearn.manifold import TSNE
+
+def plot_tSNE(features, labels=None, number_of_materials=5, title='default_title', path='.'):
+    if labels is None:
+        labels = np.zeros((features.shape[0]))
+
+    tsne_features = TSNE(n_components=2).fit_transform(features)
+
+    # define the colormap
+    cmap = plt.cm.jet
+    # extract all colors from the .jet map
+    cmaplist = [cmap(i) for i in range(cmap.N)]
+    # create the new map
+    cmap = cmap.from_list('Custom cmap', cmaplist, cmap.N)
+
+    # define the bins and normalize
+    bounds = np.linspace(0, number_of_materials, number_of_materials + 1)
+    norm = matplotlib.colors.BoundaryNorm(bounds, cmap.N)
+    
+    print(tsne_features.shape)
+
+    plt.figure()
+    plt.title(title)
+    scat = plt.scatter(tsne_features[:, 0], tsne_features[:, 1], c=labels, cmap=cmap, norm=norm)
+    cb = plt.colorbar(scat, spacing='proportional', ticks=bounds)
+    plt.savefig(join(path, title+'.png'))
 
 def thumbnail(image_fp, dec_factor=32):
     """
