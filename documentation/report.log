@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.10)  8 JAN 2020 16:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.10)  8 JAN 2020 17:42
 entering extended mode
 **./report.tex
 (report.tex
@@ -576,20 +576,25 @@ File: figures/pixel_based/sobel.png Graphic file (type png)
 Package pdftex.def Info: figures/pixel_based/sobel.png  used on input line 205.
 
 (pdftex.def)             Requested size: 378.98378pt x 100.32977pt.
- (report.bbl [5 <./figures/pixel_based/rgb_channels.png> <./figures/pixel_based
-/sobel.png>]
+<figures/pixel_based_cm.png, id=72, 614.295pt x 614.295pt>
+File: figures/pixel_based_cm.png Graphic file (type png)
+<use figures/pixel_based_cm.png>
+Package pdftex.def Info: figures/pixel_based_cm.png  used on input line 217.
+(pdftex.def)             Requested size: 398.93158pt x 398.93082pt.
+ [5 <./figures/pixel_based/rgb_channels.png> <./figures/pixel_based/sobel.png>]
+ [6 <./figures/pixel_based_cm.png>] (report.bbl
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
-) [6] (report.aux) ) 
+) [7] (report.aux) ) 
 Here is how much of TeX's memory you used:
- 4362 strings out of 493305
- 69299 string characters out of 3128497
+ 4368 strings out of 493305
+ 69460 string characters out of 3128497
  128480 words of memory out of 3000000
- 7840 multiletter control sequences out of 15000+200000
+ 7845 multiletter control sequences out of 15000+200000
  10362 words of font info for 37 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,9n,40p,616b,447s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -601,9 +606,9 @@ hannes/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.p
 fb><C:/Users/Johannes/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsf
 onts/cm/cmsy10.pfb><C:/Users/Johannes/AppData/Local/Programs/MiKTeX 2.9/fonts/t
 ype1/public/amsfonts/cm/cmti10.pfb>
-Output written on report.pdf (6 pages, 5103464 bytes).
+Output written on report.pdf (7 pages, 5134659 bytes).
 PDF statistics:
- 102 PDF objects out of 1000 (max. 8388607)
+ 109 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 108 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 113 words of extra memory for PDF output out of 10000 (max. 10000000)
 
