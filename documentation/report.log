@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.10)  8 JAN 2020 12:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.10)  8 JAN 2020 14:23
 entering extended mode
 **./report.tex
 (report.tex
@@ -444,15 +444,6 @@ Package pdftex.def Info: figures/thumbnail_dennery.png  used on input line 56.
 [1
 
 {C:/Users/Johannes/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-
-Package caption Warning: \label without proper reference on input line 57.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:thumbnail_dennery' on page 2 undefined on input l
-ine 62.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 61--63
 
  []
@@ -551,19 +542,24 @@ File: figures/wrong_labels/inc_holes.png Graphic file (type png)
 Package pdftex.def Info: figures/wrong_labels/inc_holes.png  used on input line
  167.
 (pdftex.def)             Requested size: 143.61285pt x 80.23193pt.
-<figures/flowchart.pdf, id=31, 551.1792pt x 298.23419pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--182
+
+ []
+
+<figures/flowchart.pdf, id=31, 558.16531pt x 298.23419pt>
 File: figures/flowchart.pdf Graphic file (type pdf)
 <use figures/flowchart.pdf>
-Package pdftex.def Info: figures/flowchart.pdf  used on input line 192.
-(pdftex.def)             Requested size: 398.93158pt x 215.86157pt.
- [3 <./figures/mat_examples/conc1.png> <./figures/mat_examples/conc2.png> <./fi
-gures/mat_examples/hm1.png> <./figures/mat_examples/hm2.png> <./figures/mat_exa
-mples/inc1.png> <./figures/mat_examples/inc2.png> <./figures/mat_examples/irr1.
-png> <./figures/mat_examples/irr2.png> <./figures/mat_examples/other1.png> <./f
-igures/mat_examples/other2.png>] [4 <./figures/wrong_labels/hm_rusty.png> <./fi
-gures/wrong_labels/irr_rusty.png> <./figures/wrong_labels/hm_should_be_conc.png
-> <./figures/wrong_labels/irr_holes.png> <./figures/wrong_labels/inc_holes.png>
- <./figures/flowchart.pdf
+Package pdftex.def Info: figures/flowchart.pdf  used on input line 189.
+(pdftex.def)             Requested size: 398.93158pt x 213.15392pt.
+[3 <./figures/mat_examples/conc1.png> <./figures/mat_examples/conc2.png> <./fig
+ures/mat_examples/hm1.png> <./figures/mat_examples/hm2.png> <./figures/mat_exam
+ples/inc1.png> <./figures/mat_examples/inc2.png> <./figures/mat_examples/irr1.p
+ng> <./figures/mat_examples/irr2.png> <./figures/mat_examples/other1.png> <./fi
+gures/mat_examples/other2.png>] [4 <./figures/wrong_labels/hm_rusty.png> <./fig
+ures/wrong_labels/irr_rusty.png> <./figures/wrong_labels/hm_should_be_conc.png>
+ <./figures/wrong_labels/irr_holes.png> <./figures/wrong_labels/inc_holes.png> 
+<./figures/flowchart.pdf
 
 pdfTeX warning: pdflatex.exe (file ./figures/flowchart.pdf): PDF inclusion: inv
 alid other resource which is no dict (key 'ProcSets', type <array>); ignored.
@@ -574,29 +570,25 @@ Missing character: There is no ™ in font cmr10!
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
-) [5] (report.aux)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+ [5]) [6] (report.aux) ) 
 Here is how much of TeX's memory you used:
  4350 strings out of 493305
  68939 string characters out of 3128497
- 126480 words of memory out of 3000000
+ 127480 words of memory out of 3000000
  7831 multiletter control sequences out of 15000+200000
  10362 words of font info for 37 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,9n,40p,469b,447s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/Johannes/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmbx10.pfb><C:/Users/Johannes/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Johannes/AppData/Local/Programs/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Johannes/AppData/Loc
-al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Johan
-nes/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb
->
-Output written on report.pdf (5 pages, 4841958 bytes).
+ 42i,9n,40p,616b,447s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/Johannes/AppData/Local/Programs/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Johannes/AppData/Local/Progra
+ms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Johannes/AppD
+ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/User
+s/Johannes/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr
+12.pfb><C:/Users/Johannes/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmti10.pfb>
+Output written on report.pdf (6 pages, 4843317 bytes).
 PDF statistics:
- 87 PDF objects out of 1000 (max. 8388607)
+ 90 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  86 words of extra memory for PDF output out of 10000 (max. 10000000)
 

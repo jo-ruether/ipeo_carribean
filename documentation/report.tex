@@ -54,8 +54,8 @@
 	\begin{figure}
 		\centering		
 		\includegraphics[width=0.8\textwidth]{figures/thumbnail_dennery.png}
-		\label{fig:thumbnail_dennery}
 		\caption{Thumbnail of stitched drone image from Dennery, St.Lucia.}
+		\label{fig:thumbnail_dennery}
 	\end{figure}
 
 	The data provided for the challenge consists of high resolution (~4cm) drone imagery of five patches of land: two from Soacha, Colombia, two from Mixco, Guatemala and one from Dennery (St. Lucia).
@@ -176,22 +176,19 @@
 	
 	\subsection{Petrained Neural Network as Feature Extractor}		
 	
-	The proposed processing routine uses a pretrained neural network as feature extractor. Different publicly available architectures were tested, such as ResNet50~\cite{resnet}, InceptionV3~\cite{inceptionv3}, DenseNet201~\cite{densenet} and VGG16~\cite{vgg}.
-	In order to obtain features, the classification layer
+	The proposed processing routine uses a pretrained neural network as feature extractor. Different publicly available architectures were tested, such as ResNet50~\cite{resnet}, InceptionV3~\cite{inceptionv3}, DenseNet201~\cite{densenet} and VGG16~\cite{vgg}. The employed pretrained architectures were trained on more than a million images of 1000 categories from the ImageNet database ~\cite{imagenet}. 
+	ImageNet is a collection of natural images of common objects and animals. The features which are relevant to distinguish those classes, are very likely also relevant to discriminate other types of natural images, such as roofs.
+	In order to obtain features, the classification layer is removed and replaced by an average or maximum pooling layer to reduce the number of features.\\	
 	
-	 and a Support Vector Machine (SVM) or Random Forest (RF) as classifier.
+	In the next step, a Support Vector Machine (SVM) or Random Forest (RF) is trained to classify roof materials based on the extracted features. The calculated classification can then be used to predict class membership based on features of test samples. For the context of the challenge, prediction probabilities needed to be calculated. The \textit{scikit-learn} implementation of both SVM and RF provide pseudo-probabilities that take a samples' distance to the decision boundary into account. Those probabilities/confidences were submitted for evaluation on the challenge website.
+	The full classification pipeline is presented in Fig.~\ref{fig:flowchart}.
 	
-
-	
-	Parameters
-	
-	The employed pretrained architectures were trained images from the ImageNet database ~\cite{imagenet}. 
 	
 	\begin{figure}
 		\centering		
 		\includegraphics[width=0.8\textwidth]{figures/flowchart.pdf}
-		\label{fig:flowchart}
 		\caption{Proposed processing routine: The classification part of a pretrained neural network is removed, leaving the feature extraction. A SVM or RF is used to build a model out of the training features and the groundtruth labels in an iterative process. Test features are fed into this model to predict labels and determine prediction confidence.}
+		\label{fig:flowchart}
 	\end{figure}
 
 	\subsection{Pixel-based Baseline }
