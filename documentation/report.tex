@@ -118,43 +118,51 @@
 	\label{fig:mat_examples}
 	\end{figure}
 
-\subsection{Data Noise}
-
-Class membership is unfortunately sometimes ambiguous in the provided groundtruth data. 
-First, the labels are used inconsistently. This is especially true for "irregular" and "healthy metal". Where rusty roofs should be labelled as "irregular", many of them get a "healthy metal" label.
-Moreover there is confusion about features that make a roof "irregular" or "incomplete".
-
-These inconsistencies might stem from different annotators labeling images.
-
-
-Second, labels are sometimes clearly incorrect, e.g. concrete roofs are labeled as "healthy metal". Some regions seems to be annotated with more care than others. It is impossible to quantify the extent to which the set is noisy. 
-Some examples of these ambiguities are shown in Fig.~\ref{fig:ambiguities}.
-The implications for the results are discussed in section~\ref{sec:discussion}.
-
-
-	\begin{figure}
+	\subsection{Data Noise}
 	
-	\centering
-	\begin{subfigure}[c]{0.5\textwidth}
-		\includegraphics[width=0.47\textwidth]{figures/wrong_labels/hm_rusty.png}
-		\subcaption{Labeled as "healthy metal"}		
-		\includegraphics[width=0.47\textwidth]{figures/wrong_labels/irr_rusty.png}
-		\subcaption{Labeled as "irregular metal"}
-	\end{subfigure}
-	\begin{subfigure}[c]{0.5\textwidth}
-		\includegraphics[width=0.47\textwidth]{figures/wrong_labels/irr_holes.png}
-		\subcaption{Labeled as "irregular metal"}		
-		\includegraphics[width=0.47\textwidth]{figures/wrong_labels/inc_holes.png}
-		\subcaption{Labeled as "incomplete"}
-	\end{subfigure}
-	\begin{subfigure}[c]{0.32\textwidth}
+	Class membership is unfortunately sometimes ambiguous in the provided groundtruth data. 
+	First, labels are sometimes used inconsistently. This is especially true for "irregular" and "healthy metal". Where rusty roofs should be labeled as "irregular", many of them get a "healthy metal" label.
+	Moreover there is confusion about features that make a roof "irregular" or "incomplete".
+	These inconsistencies might stem from different annotators labeling images.
+	
+	Second, labels are sometimes clearly incorrect, e.g. concrete roofs are labeled as "healthy metal". Some regions seems to be annotated with more care than others. 
+	
+	It is impossible to quantify the extent to which annotations are noisy. 
+	Some examples of these ambiguities are shown in Fig.~\ref{fig:ambiguities}.
+	The implications for the results are discussed in section~\ref{sec:discussion}.
+	
+	\begin{figure}
 		\centering
-		\includegraphics[width=0.35\textwidth]{figures/wrong_labels/hm_should_be_conc.png}	
-		\subcaption{Labeled as "healthy metal" where clearly concrete}
-	\end{subfigure}
-	\caption{Example images for each material class. (Scales differ)}
-	\label{fig:ambiguities}
-\end{figure}
+		\begin{subfigure}[c]{0.31\textwidth}
+			\centering
+			\includegraphics[width=.72\textwidth]{figures/wrong_labels/hm_rusty.png}
+			\subcaption{"healthy metal"}	
+		\end{subfigure}	
+		\begin{subfigure}[c]{0.31\textwidth}
+			\centering
+			\includegraphics[width=.72\textwidth]{figures/wrong_labels/irr_rusty.png}
+			\subcaption{"irregular metal"}
+		\end{subfigure}
+		\begin{subfigure}[c]{0.31\textwidth}
+			\centering
+			\includegraphics[width=.9\textwidth]{figures/wrong_labels/hm_should_be_conc.png}
+			\subcaption{Labeled "irregular metal" where clearly concrete}
+		\end{subfigure}
+		\vspace{.3cm}]
+		\begin{subfigure}[c]{0.4\textwidth}
+			\centering
+			\includegraphics[width=0.67\textwidth]{figures/wrong_labels/irr_holes.png}
+			\subcaption{Labeled "irregular metal"}
+		\end{subfigure}
+		\begin{subfigure}[c]{0.4\textwidth}
+			\centering		
+			\includegraphics[width=0.72\textwidth]{figures/wrong_labels/inc_holes.png}
+			\subcaption{Labeled "incomplete"}
+		\end{subfigure}
+		\caption{(a) and (b) named differently due to incoherent labeling of rusty roofs. Similarly unclear boundary between "irregular metal" and "incomplete" ((d) and (e)). Obvious labeling error in (c).}
+		\label{fig:ambiguities}
+	\end{figure}
+
 	
 	\section{Proposed Processing Routine}
 	includes flowchart

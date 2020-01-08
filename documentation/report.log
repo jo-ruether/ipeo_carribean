@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.10)  7 JAN 2020 18:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.10)  8 JAN 2020 09:28
 entering extended mode
 **./report.tex
 (report.tex
@@ -515,46 +515,42 @@ gures/mat_examples/other2.png>]
 File: figures/wrong_labels/hm_rusty.png Graphic file (type png)
 <use figures/wrong_labels/hm_rusty.png>
 Package pdftex.def Info: figures/wrong_labels/hm_rusty.png  used on input line 
-139.
-(pdftex.def)             Requested size: 117.186pt x 129.19377pt.
+138.
+(pdftex.def)             Requested size: 111.3008pt x 122.70445pt.
 <figures/wrong_labels/irr_rusty.png, id=35, 273.02pt x 291.0875pt>
 File: figures/wrong_labels/irr_rusty.png Graphic file (type png)
 <use figures/wrong_labels/irr_rusty.png>
 Package pdftex.def Info: figures/wrong_labels/irr_rusty.png  used on input line
- 141.
-(pdftex.def)             Requested size: 117.186pt x 124.93864pt.
-<figures/wrong_labels/irr_holes.png, id=36, 166.6225pt x 326.21875pt>
-File: figures/wrong_labels/irr_holes.png Graphic file (type png)
-<use figures/wrong_labels/irr_holes.png>
-Package pdftex.def Info: figures/wrong_labels/irr_holes.png  used on input line
- 145.
-(pdftex.def)             Requested size: 117.186pt x 229.43669pt.
-<figures/wrong_labels/inc_holes.png, id=37, 200.75pt x 359.3425pt>
-File: figures/wrong_labels/inc_holes.png Graphic file (type png)
-<use figures/wrong_labels/inc_holes.png>
-Package pdftex.def Info: figures/wrong_labels/inc_holes.png  used on input line
- 147.
-(pdftex.def)             Requested size: 117.186pt x 209.76764pt.
-<figures/wrong_labels/hm_should_be_conc.png, id=38, 192.72pt x 281.05pt>
+ 143.
+(pdftex.def)             Requested size: 111.3008pt x 118.66707pt.
+<figures/wrong_labels/hm_should_be_conc.png, id=36, 210.7875pt x 144.54pt>
 File: figures/wrong_labels/hm_should_be_conc.png Graphic file (type png)
 <use figures/wrong_labels/hm_should_be_conc.png>
 Package pdftex.def Info: figures/wrong_labels/hm_should_be_conc.png  used on in
-put line 152.
-(pdftex.def)             Requested size: 55.85245pt x 81.45094pt.
-
-
-LaTeX Warning: Float too large for page by 112.59917pt on input line 157.
-
-(report.bbl
+put line 148.
+(pdftex.def)             Requested size: 139.12482pt x 95.4011pt.
+<figures/wrong_labels/irr_holes.png, id=37, 244.66406pt x 124.96687pt>
+File: figures/wrong_labels/irr_holes.png Graphic file (type png)
+<use figures/wrong_labels/irr_holes.png>
+Package pdftex.def Info: figures/wrong_labels/irr_holes.png  used on input line
+ 154.
+(pdftex.def)             Requested size: 133.63914pt x 68.2591pt.
+<figures/wrong_labels/inc_holes.png, id=38, 269.50688pt x 150.5625pt>
+File: figures/wrong_labels/inc_holes.png Graphic file (type png)
+<use figures/wrong_labels/inc_holes.png>
+Package pdftex.def Info: figures/wrong_labels/inc_holes.png  used on input line
+ 159.
+(pdftex.def)             Requested size: 143.61285pt x 80.23193pt.
+ [3 <./figures/wrong_labels/hm_rusty.png> <./figures/wrong_labels/irr_rusty.png
+> <./figures/wrong_labels/hm_should_be_conc.png> <./figures/wrong_labels/irr_ho
+les.png> <./figures/wrong_labels/inc_holes.png>] (report.bbl
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
-) [3] [4 <./figures/wrong_labels/hm_rusty.png> <./figures/wrong_labels/irr_rust
-y.png> <./figures/wrong_labels/irr_holes.png> <./figures/wrong_labels/inc_holes
-.png> <./figures/wrong_labels/hm_should_be_conc.png>] (report.aux) ) 
+) [4] (report.aux) ) 
 Here is how much of TeX's memory you used:
  4332 strings out of 493305
  68551 string characters out of 3128497
@@ -562,15 +558,15 @@ Here is how much of TeX's memory you used:
  7816 multiletter control sequences out of 15000+200000
  10362 words of font info for 37 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,9n,40p,469b,445s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/J
-ohannes/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10
-.pfb><C:/Users/Johannes/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/am
-sfonts/cm/cmbx12.pfb><C:/Users/Johannes/AppData/Local/Programs/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Johannes/AppData/Local/Programs/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Johannes/AppData/L
-ocal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on report.pdf (4 pages, 2042702 bytes).
+ 42i,9n,40p,469b,447s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/Johannes/AppData/Local/Programs/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Johannes/AppData/Local/Programs/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Johannes/AppData/
+Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Jo
+hannes/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.p
+fb><C:/Users/Johannes/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmti10.pfb>
+Output written on report.pdf (4 pages, 2048325 bytes).
 PDF statistics:
  66 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
