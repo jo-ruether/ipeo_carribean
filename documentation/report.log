@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.10)  8 JAN 2020 11:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.10)  8 JAN 2020 12:31
 entering extended mode
 **./report.tex
 (report.tex
@@ -436,148 +436,167 @@ Underfull \hbox (badness 10000) in paragraph at lines 46--47
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 54--56
-
- []
-
+<figures/thumbnail_dennery.png, id=1, 1041.8925pt x 531.1845pt>
+File: figures/thumbnail_dennery.png Graphic file (type png)
+<use figures/thumbnail_dennery.png>
+Package pdftex.def Info: figures/thumbnail_dennery.png  used on input line 56.
+(pdftex.def)             Requested size: 398.93158pt x 203.38408pt.
 [1
 
 {C:/Users/Johannes/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 62--63
+
+Package caption Warning: \label without proper reference on input line 57.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:thumbnail_dennery' on page 2 undefined on input l
+ine 62.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 61--63
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--71
 \OT1/cmr/m/n/10.95 https://www.drivendata.org/competitions/58/disaster-
  []
 
-<figures/mat_examples/conc1.png, id=10, 436.63126pt x 497.86pt>
+<figures/mat_examples/conc1.png, id=12, 436.63126pt x 497.86pt>
 File: figures/mat_examples/conc1.png Graphic file (type png)
 <use figures/mat_examples/conc1.png>
-Package pdftex.def Info: figures/mat_examples/conc1.png  used on input line 92.
-
+Package pdftex.def Info: figures/mat_examples/conc1.png  used on input line 100
+.
 (pdftex.def)             Requested size: 75.00075pt x 85.5163pt.
-<figures/mat_examples/conc2.png, id=12, 256.96pt x 265.99374pt>
+<figures/mat_examples/conc2.png, id=13, 256.96pt x 265.99374pt>
 File: figures/mat_examples/conc2.png Graphic file (type png)
 <use figures/mat_examples/conc2.png>
-Package pdftex.def Info: figures/mat_examples/conc2.png  used on input line 93.
-
+Package pdftex.def Info: figures/mat_examples/conc2.png  used on input line 101
+.
 (pdftex.def)             Requested size: 75.00075pt x 77.63542pt.
-<figures/mat_examples/hm1.png, id=13, 246.9225pt x 249.93375pt>
+<figures/mat_examples/hm1.png, id=14, 246.9225pt x 249.93375pt>
 File: figures/mat_examples/hm1.png Graphic file (type png)
 <use figures/mat_examples/hm1.png>
-Package pdftex.def Info: figures/mat_examples/hm1.png  used on input line 97.
+Package pdftex.def Info: figures/mat_examples/hm1.png  used on input line 105.
 (pdftex.def)             Requested size: 75.00075pt x 75.91505pt.
-<figures/mat_examples/hm2.png, id=14, 199.74625pt x 184.69pt>
+<figures/mat_examples/hm2.png, id=15, 199.74625pt x 184.69pt>
 File: figures/mat_examples/hm2.png Graphic file (type png)
 <use figures/mat_examples/hm2.png>
-Package pdftex.def Info: figures/mat_examples/hm2.png  used on input line 98.
+Package pdftex.def Info: figures/mat_examples/hm2.png  used on input line 106.
 (pdftex.def)             Requested size: 75.00075pt x 69.34593pt.
-<figures/mat_examples/inc1.png, id=15, 331.2375pt x 225.84375pt>
+<figures/mat_examples/inc1.png, id=16, 331.2375pt x 225.84375pt>
 File: figures/mat_examples/inc1.png Graphic file (type png)
 <use figures/mat_examples/inc1.png>
-Package pdftex.def Info: figures/mat_examples/inc1.png  used on input line 102.
+Package pdftex.def Info: figures/mat_examples/inc1.png  used on input line 110.
 
 (pdftex.def)             Requested size: 75.00075pt x 51.13658pt.
-<figures/mat_examples/inc2.png, id=16, 330.23375pt x 278.03876pt>
+<figures/mat_examples/inc2.png, id=17, 330.23375pt x 278.03876pt>
 File: figures/mat_examples/inc2.png Graphic file (type png)
 <use figures/mat_examples/inc2.png>
-Package pdftex.def Info: figures/mat_examples/inc2.png  used on input line 103.
+Package pdftex.def Info: figures/mat_examples/inc2.png  used on input line 111.
 
 (pdftex.def)             Requested size: 75.00075pt x 63.14572pt.
-<figures/mat_examples/irr1.png, id=17, 217.81375pt x 181.67876pt>
+<figures/mat_examples/irr1.png, id=18, 217.81375pt x 181.67876pt>
 File: figures/mat_examples/irr1.png Graphic file (type png)
 <use figures/mat_examples/irr1.png>
-Package pdftex.def Info: figures/mat_examples/irr1.png  used on input line 107.
+Package pdftex.def Info: figures/mat_examples/irr1.png  used on input line 115.
 
 (pdftex.def)             Requested size: 51.06537pt x 42.59193pt.
-<figures/mat_examples/irr2.png, id=18, 105.39375pt x 173.64874pt>
+<figures/mat_examples/irr2.png, id=19, 105.39375pt x 173.64874pt>
 File: figures/mat_examples/irr2.png Graphic file (type png)
 <use figures/mat_examples/irr2.png>
-Package pdftex.def Info: figures/mat_examples/irr2.png  used on input line 108.
+Package pdftex.def Info: figures/mat_examples/irr2.png  used on input line 116.
 
 (pdftex.def)             Requested size: 51.06537pt x 84.13739pt.
-<figures/mat_examples/other1.png, id=19, 113.42375pt x 130.4875pt>
+<figures/mat_examples/other1.png, id=20, 113.42375pt x 130.4875pt>
 File: figures/mat_examples/other1.png Graphic file (type png)
 <use figures/mat_examples/other1.png>
-Package pdftex.def Info: figures/mat_examples/other1.png  used on input line 11
-3.
+Package pdftex.def Info: figures/mat_examples/other1.png  used on input line 12
+1.
 (pdftex.def)             Requested size: 55.85245pt x 64.25401pt.
-<figures/mat_examples/other2.png, id=20, 710.655pt x 666.49pt>
+<figures/mat_examples/other2.png, id=21, 710.655pt x 666.49pt>
 File: figures/mat_examples/other2.png Graphic file (type png)
 <use figures/mat_examples/other2.png>
-Package pdftex.def Info: figures/mat_examples/other2.png  used on input line 11
-4.
+Package pdftex.def Info: figures/mat_examples/other2.png  used on input line 12
+2.
 (pdftex.def)             Requested size: 71.80856pt x 67.34445pt.
-[2 <./figures/mat_examples/conc1.png> <./figures/mat_examples/conc2.png> <./fig
-ures/mat_examples/hm1.png> <./figures/mat_examples/hm2.png> <./figures/mat_exam
-ples/inc1.png> <./figures/mat_examples/inc2.png> <./figures/mat_examples/irr1.p
-ng> <./figures/mat_examples/irr2.png> <./figures/mat_examples/other1.png> <./fi
-gures/mat_examples/other2.png>]
-<figures/wrong_labels/hm_rusty.png, id=34, 284.06125pt x 313.17pt>
+[2 <./figures/thumbnail_dennery.png>]
+<figures/wrong_labels/hm_rusty.png, id=26, 284.06125pt x 313.17pt>
 File: figures/wrong_labels/hm_rusty.png Graphic file (type png)
 <use figures/wrong_labels/hm_rusty.png>
 Package pdftex.def Info: figures/wrong_labels/hm_rusty.png  used on input line 
-138.
+146.
 (pdftex.def)             Requested size: 111.3008pt x 122.70445pt.
-<figures/wrong_labels/irr_rusty.png, id=35, 273.02pt x 291.0875pt>
+<figures/wrong_labels/irr_rusty.png, id=27, 273.02pt x 291.0875pt>
 File: figures/wrong_labels/irr_rusty.png Graphic file (type png)
 <use figures/wrong_labels/irr_rusty.png>
 Package pdftex.def Info: figures/wrong_labels/irr_rusty.png  used on input line
- 143.
+ 151.
 (pdftex.def)             Requested size: 111.3008pt x 118.66707pt.
-<figures/wrong_labels/hm_should_be_conc.png, id=36, 210.7875pt x 144.54pt>
+<figures/wrong_labels/hm_should_be_conc.png, id=28, 210.7875pt x 144.54pt>
 File: figures/wrong_labels/hm_should_be_conc.png Graphic file (type png)
 <use figures/wrong_labels/hm_should_be_conc.png>
 Package pdftex.def Info: figures/wrong_labels/hm_should_be_conc.png  used on in
-put line 148.
+put line 156.
 (pdftex.def)             Requested size: 139.12482pt x 95.4011pt.
-<figures/wrong_labels/irr_holes.png, id=37, 244.66406pt x 124.96687pt>
+<figures/wrong_labels/irr_holes.png, id=29, 244.66406pt x 124.96687pt>
 File: figures/wrong_labels/irr_holes.png Graphic file (type png)
 <use figures/wrong_labels/irr_holes.png>
 Package pdftex.def Info: figures/wrong_labels/irr_holes.png  used on input line
- 154.
+ 162.
 (pdftex.def)             Requested size: 133.63914pt x 68.2591pt.
-<figures/wrong_labels/inc_holes.png, id=38, 269.50688pt x 150.5625pt>
+<figures/wrong_labels/inc_holes.png, id=30, 269.50688pt x 150.5625pt>
 File: figures/wrong_labels/inc_holes.png Graphic file (type png)
 <use figures/wrong_labels/inc_holes.png>
 Package pdftex.def Info: figures/wrong_labels/inc_holes.png  used on input line
- 159.
+ 167.
 (pdftex.def)             Requested size: 143.61285pt x 80.23193pt.
-<figures/flowchart.pdf, id=39, 551.1792pt x 298.23419pt>
+<figures/flowchart.pdf, id=31, 551.1792pt x 298.23419pt>
 File: figures/flowchart.pdf Graphic file (type pdf)
 <use figures/flowchart.pdf>
-Package pdftex.def Info: figures/flowchart.pdf  used on input line 179.
+Package pdftex.def Info: figures/flowchart.pdf  used on input line 192.
 (pdftex.def)             Requested size: 398.93158pt x 215.86157pt.
- [3 <./figures/wrong_labels/hm_rusty.png> <./figures/wrong_labels/irr_rusty.png
-> <./figures/wrong_labels/hm_should_be_conc.png> <./figures/wrong_labels/irr_ho
-les.png> <./figures/wrong_labels/inc_holes.png>] (report.bbl
+ [3 <./figures/mat_examples/conc1.png> <./figures/mat_examples/conc2.png> <./fi
+gures/mat_examples/hm1.png> <./figures/mat_examples/hm2.png> <./figures/mat_exa
+mples/inc1.png> <./figures/mat_examples/inc2.png> <./figures/mat_examples/irr1.
+png> <./figures/mat_examples/irr2.png> <./figures/mat_examples/other1.png> <./f
+igures/mat_examples/other2.png>] [4 <./figures/wrong_labels/hm_rusty.png> <./fi
+gures/wrong_labels/irr_rusty.png> <./figures/wrong_labels/hm_should_be_conc.png
+> <./figures/wrong_labels/irr_holes.png> <./figures/wrong_labels/inc_holes.png>
+ <./figures/flowchart.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures/flowchart.pdf): PDF inclusion: inv
+alid other resource which is no dict (key 'ProcSets', type <array>); ignored.
+>] (report.bbl
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
- [4 <./figures/flowchart.pdf
+) [5] (report.aux)
 
-pdfTeX warning: pdflatex.exe (file ./figures/flowchart.pdf): PDF inclusion: inv
-alid other resource which is no dict (key 'ProcSets', type <array>); ignored.
->]) [5] (report.aux) ) 
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 4340 strings out of 493305
- 68724 string characters out of 3128497
+ 4350 strings out of 493305
+ 68939 string characters out of 3128497
  126480 words of memory out of 3000000
- 7822 multiletter control sequences out of 15000+200000
+ 7831 multiletter control sequences out of 15000+200000
  10362 words of font info for 37 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,9n,40p,469b,447s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/Johannes/AppData/Local/Programs/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Johannes/AppData/Local/Programs
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Johannes/AppDat
-a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/
-Johannes/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12
-.pfb><C:/Users/Johannes/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/am
-sfonts/cm/cmti10.pfb>
-Output written on report.pdf (5 pages, 2078740 bytes).
+<C:/Users/Johannes/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmbx10.pfb><C:/Users/Johannes/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Johannes/AppData/Local/Programs/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Johannes/AppData/Loc
+al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Johan
+nes/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb
+>
+Output written on report.pdf (5 pages, 4841958 bytes).
 PDF statistics:
- 85 PDF objects out of 1000 (max. 8388607)
+ 87 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 81 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 86 words of extra memory for PDF output out of 10000 (max. 10000000)
 

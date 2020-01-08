@@ -20,6 +20,23 @@ D.~Yudin, A.~Naumov, A.~Dolzhenko, and E.~Patrakova, ``Software for roof
 E.~A.~B. Matthew A.~Shreve, ``Image segmentation system for verification of
   property roof damage, us patent 20170352100a1,'' 2017.
 
+\bibitem{resnet}
+K.~He, X.~Zhang, S.~Ren, and J.~Sun, ``Deep residual learning for image
+  recognition,'' {\em CoRR}, vol.~abs/1512.03385, 2015.
+
+\bibitem{inceptionv3}
+C.~Szegedy, V.~Vanhoucke, S.~Ioffe, J.~Shlens, and Z.~Wojna, ``Rethinking the
+  inception architecture for computer vision,'' {\em CoRR},
+  vol.~abs/1512.00567, 2015.
+
+\bibitem{densenet}
+G.~Huang, Z.~Liu, and K.~Q. Weinberger, ``Densely connected convolutional
+  networks,'' {\em CoRR}, vol.~abs/1608.06993, 2016.
+
+\bibitem{vgg}
+K.~Simonyan and A.~Zisserman, ``Very deep convolutional networks for
+  large-scale image recognition,'' {\em CoRR}, vol.~abs/1409.1556, 2014.
+
 \bibitem{imagenet}
 O.~Russakovsky, J.~Deng, H.~Su, J.~Krause, S.~Satheesh, S.~Ma, Z.~Huang,
   A.~Karpathy, A.~Khosla, M.~Bernstein, {\em et~al.}, ``Imagenet large scale

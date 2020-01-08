@@ -50,9 +50,17 @@
 	\section{Data Description}
 	
 	\subsection{Images}
-	
+		
+	\begin{figure}
+		\centering		
+		\includegraphics[width=0.8\textwidth]{figures/thumbnail_dennery.png}
+		\label{fig:thumbnail_dennery}
+		\caption{Thumbnail of stitched drone image from Dennery, St.Lucia.}
+	\end{figure}
+
 	The data provided for the challenge consists of high resolution (~4cm) drone imagery of five patches of land: two from Soacha, Colombia, two from Mixco, Guatemala and one from Dennery (St. Lucia).
-	For every region, there is one stitched cloud-optimized GeoTIFF file, ranging from 500 to 1800 Megapixels in size.\\
+	For every region, there is one stitched cloud-optimized GeoTIFF file, ranging from 500 to 1800 Megapixels in size. A thumbnail of the Dennery settlement is shown as example in Fig.~\ref{fig:thumbnail_dennery}.\\
+
 
 	\begin{center}
 		\begin{tabular}{ | m{5cm} | m{10cm}|} 
@@ -167,8 +175,13 @@
 	\section{Proposed Processing Routine}
 	
 	\subsection{Petrained Neural Network as Feature Extractor}		
-	The proposed processing routine uses a pretrained neural network as feature extractor.
-	Natural images 
+	
+	The proposed processing routine uses a pretrained neural network as feature extractor. Different publicly available architectures were tested, such as ResNet50~\cite{resnet}, InceptionV3~\cite{inceptionv3}, DenseNet201~\cite{densenet} and VGG16~\cite{vgg}.
+	In order to obtain features, the classification layer
+	
+	 and a Support Vector Machine (SVM) or Random Forest (RF) as classifier.
+	
+
 	
 	Parameters
 	
@@ -181,12 +194,15 @@
 		\caption{Proposed processing routine: The classification part of a pretrained neural network is removed, leaving the feature extraction. A SVM or RF is used to build a model out of the training features and the groundtruth labels in an iterative process. Test features are fed into this model to predict labels and determine prediction confidence.}
 	\end{figure}
 
-	\subsection{Pixel-based Baseline Method}
+	\subsection{Pixel-based Baseline }
 	As a baseline for comparison, several statistical metrics were extracted as features and classified with a SVM.
 	
 	
 	\section{Results}
 	
+	The proposed processing routine was designed to achieve good results in terms of log-loss.
+	
+	\textbf{Calculate the log loss!!}
 	
 	
 	Results qualitative (e.g. maps) and quantitative (e.g. accuracies, statistics). /!\ This implies that you have either access to groundtruth data or digitized/photointerpreted some areas in order to compute accuracies.
