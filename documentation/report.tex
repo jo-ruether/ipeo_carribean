@@ -178,26 +178,9 @@
 	
 	\section{Proposed Processing Routine}
 	
-	\subsection{Petrained Neural Network as Feature Extractor}		
-	
-	The proposed processing routine uses a pretrained neural network as feature extractor. Different publicly available architectures were tested, such as ResNet50~\cite{resnet}, InceptionV3~\cite{inceptionv3}, DenseNet201~\cite{densenet} and VGG16~\cite{vgg}. The employed pretrained architectures were trained on more than a million images of 1000 categories from the ImageNet database ~\cite{imagenet}. 
-	ImageNet is a collection of natural images of common objects and animals. The features which are relevant to distinguish those classes, are very likely also relevant to discriminate other types of natural images, such as roofs.
-	In order to obtain features, the classification layer is removed and replaced by an average or maximum pooling layer to reduce the number of features.\\	
-	
-	In the next step, a Support Vector Machine (SVM) or Random Forest (RF) is trained to classify roof materials based on the extracted features. The calculated classification can then be used to predict class membership based on features of test samples. For the context of the challenge, prediction probabilities needed to be calculated. The \textit{scikit-learn} implementation of both SVM and RF provide pseudo-probabilities that take a samples' distance to the decision boundary into account. Those probabilities/confidences were submitted for evaluation on the challenge website.
-	The full classification pipeline is presented in Fig.~\ref{fig:flowchart}.
-	
-	
-	\begin{figure}
-		\centering		
-		\includegraphics[width=0.8\textwidth]{figures/flowchart.pdf}
-		\caption{Proposed processing routine: The classification part of a pretrained neural network is removed, leaving the feature extraction. A SVM or RF is used to build a model out of the training features and the groundtruth labels in an iterative process. Test features are fed into this model to predict labels and determine prediction confidence.}
-		\label{fig:flowchart}
-	\end{figure}
-
-	\subsection{Pixel-based Baseline } 
+	\subsection{Pixel-based Baseline} 
 	\label{sec:pixel_based}
-	As a baseline for comparison, several statistical metrics are extracted as features and classified with a SVM. The mean is used to assess the dominant colors on a roof. Heterogeneity is tried to measure using the standard deviation and range of every image. Every metric is calculated on every color channel and on the absolute of the Sobel-filtered image in x- and y-direction of every color channel (see Fig.~\ref{fig:pixel_based}). This results in a 18-dimensional feature vector (3 metrics $\times$ 3 channels on original and gradient image).
+	As a baseline for comparison, several statistical metrics were extracted as "naive" features and classified using a SVM or RF. The mean is used to assess the dominant colors on a roof. Heterogeneity is tried to be measured using the standard deviation and range. Every metric is calculated on every color channel and on the absolute of the Sobel-filtered image in x- and y-direction of every color channel (see Fig.~\ref{fig:pixel_based}). This results in a 18-dimensional feature vector (3 metrics $\times$ 3 channels on original and gradient image).
 	
 	\begin{figure}
 		\centering
@@ -214,9 +197,27 @@
 		\label{fig:pixel_based}
 	\end{figure}
 	
+	
+	\subsection{Petrained Neural Network as Feature Extractor}
+	The proposed processing routine uses a pretrained neural network as feature extractor. Different publicly available architectures, such as ResNet50~\cite{resnet}, InceptionV3~\cite{inceptionv3}, DenseNet201~\cite{densenet} and VGG16~\cite{vgg} were tested. The employed architectures were each trained on more than a million images of 1000 categories from the ImageNet database ~\cite{imagenet}. 
+	
+	ImageNet is a collection of natural images of everyday objects and animals. Although roofs are of course different from animals and other objects, natural images share a lot of common features. The features which are relevant to distinguish classes in ImageNet, are very likely to be also relevant to discriminate other types of natural images, such as roofs.
+	In order to obtain features, the classification layer were removed and replaced by an average or maximum pooling layer to reduce the number of features.\\	
+	
+	In the next step, a Support Vector Machine (SVM) or Random Forest (RF) was trained to classify roof materials based on the extracted features. The calculated classification could then be used to predict class membership based on features of test samples. The \textit{scikit-learn} implementation of both SVM and RF provide pseudo-probabilities that take a samples' distance to the decision boundary into account. Those probabilities/confidences were submitted for evaluation on the challenge website.
+	The full classification pipeline is presented in Fig.~\ref{fig:flowchart}.	
+	
+	\begin{figure}
+		\centering		
+		\includegraphics[width=0.8\textwidth]{figures/flowchart.pdf}
+		\caption{Proposed processing routine: The classification part of a pretrained neural network is removed, leaving the feature extraction. A SVM or RF is used to build a model out of the training features and the groundtruth labels in an iterative process. Test features are fed into this model to predict labels and determine prediction confidence.}
+		\label{fig:flowchart}
+	\end{figure}
+
+
 	\section{Results}
 	
-	Before investigating results it has to be clarified that the performance of the suggested system was optimized to perform well in the described \textit{Open AI challenge}. The predictions to be submitted were class membership probabilities and not hard labels. Since the algorithm is supposed to just hint at high risk roofs to be revisited by a human instructor instead of indicating one clear action, this seems reasonable. In section~\ref{sec:challenge_perf}, the challenge performance is presented. Section~\ref{sec:class_comparison} shows results that used only the training data to compare the system to other classifiers using more metrics.
+	Before investigating results it has to be clarified that the performance of the suggested system was optimized to perform well in the described \textit{Open AI Challenge}. The predictions to be submitted were class membership probabilities and not hard labels. Since the algorithm is supposed to hint at high risk roofs to be revisited by a human instructor instead of indicating one clear action, this seems reasonable. In section~\ref{sec:challenge_perf}, the system's performance on the challenge test set is presented. Section~\ref{sec:class_comparison} shows results for which the annotated part of the data was used to compare the best-performing system to other approaches.
 	
 	\subsection{Online Challenge Performance}
 	\label{sec:challenge_perf}
@@ -225,9 +226,10 @@
 	
 	\begin{equation}
 		loss = -\frac{1}{N}\cdot \sum_{i=1}^{N} \sum_{j=1}^{M}y_{ij}\log p_{ij}
+		\label{eq:log_loss}
 	\end{equation}
 	
-	In that context, $N$ was the number of test samples (=7320), $M$ the number of classes (=5), $y_{ij}$ the true label, i.e. 1 if observation $i$ belonged to class $j$ and 0 otherwise and $p_ij$ was the predicted probability that $i$ was of class $j$. 
+	In that context, $N$ was the number of test samples (=7320), $M$ the number of classes (=5), $y_{ij}$ the true label (i.e. 1 if observation $i$ belonged to class $j$ and 0 otherwise) and $p_{ij}$ was the predicted probability that $i$ was of class $j$. 
 	
 	The best-performing setup consisted of a ResNet50 as feature extractor with average pooling at the end and classification using a SVM with a high regularization parameter $C=100$.
 	Other pretrained networks performed similarly well, although not quite as good. Results on the test in terms of log-loss are shown in table~\ref{tab:model_comparison}.
@@ -244,9 +246,9 @@
 			\hline
 			ResNet50 & 0.5554 \\
 			\hline
-			InceptionV3 & 0.5917\\
-			\hline
 			DenseNet201 & 0.5800\\
+			\hline
+			InceptionV3 & 0.5917\\
 			\hline
 			VGG16 & 0.6152\\
 			\hline
@@ -255,23 +257,21 @@
 		\captionof{table}{Log-loss on online challenge test set for feature extraction with different pretrained models. Classification was always performed with an SVM using $C=100$.} 
 		\label{tab:model_comparison}
 	\end{center}
-
-	
-	\subsection{Removing Noisy Labels}
-	The problem of noisy data was tried to be tackled by selecting clean subsets of training data to improve the accuracy of the model. However in terms of log-loss on the test set, this proved to be counterproductive. It is likely that due to more homogeneous training sets, the model became bad at handling noise (wrong or contentious labels) and was punished heavily for "wrong" classifications with high confidence.
 	
 	\subsection{Comparing Performances}
 	\label{sec:class_comparison}
-	Since classification performance measures require groundtruth data, the previously so-called "training set" provided for the challenge was split into new training and test sets for the evaluation.
+	Since classification performance measures require groundtruth data, the previously so-called "training set" provided for the challenge was split into new training and test sets for evaluation.
 		
 	To assess the difficulty of the task and the improvement through features extracted by neural networks, the system performance was compared against the pixel-based approach described in section~\ref{sec:pixel_based}.
 	Moreover, the Support Vector Machine as the best-performing classifier was tested against a Random Forest model. For both classification methods, parameters were empirically optimized. For SVM a value of $C=100$ was found to work well. As for RF, 1000 trees were trained with a maximum depth of 16. 
+	Results are summarized in table~\ref{tab:pb_vs_nn}. For every listed approach, evaluation metrics were calculated by cross-validation on five different splits. Besides the log-loss in eq.~\ref{eq:log_loss}, the average accuracy and average F1-score as mean of per-class score (macro F1-score) were calculated.
+	
 	%Computation times for classifier training increases drastically with the amount of considered features. Furthermore, eliminating irrelevant features can improve classification. Feature importance can be easily ranked...
 	
 	\begin{center}
 		\bgroup
 		\def\arraystretch{1.1}
-		\begin{tabular}{ | m{5cm} | m{2cm} | m{2cm} | m{2cm} |} 
+		\begin{tabular}{ | m{5cm} | m{3cm} | m{3cm} | m{3cm} |} 
 			
 			\hline
 			Method & Avg. Log-loss & Avg. Accuracy & Avg. Macro-F1 \\
@@ -301,18 +301,26 @@
 		\end{subfigure}
 		\begin{subfigure}[t]{.5\textwidth}
 			\centering
-			\includegraphics[width=0.9\textwidth]{figures/results/nn_based_cm.png}
+			\includegraphics[width=0.9\textwidth]{figures/results/nn_based_cm_svm.png}
 			\caption{ResNet50 features classified by SVM}
 		\end{subfigure}
 	\caption{Confusion Matrices for pixel-based vs. deep features on random split of the provided data (same split for both).}
 	\label{fig:pixel_based_cm}
 	\end{figure}
 	
-	Map with colored rectangles indicating roof security?????????????
-	
 	
 	\section{Discussion}
 	\label{sec:discussion}
+	
+	\subsection{Analyzing Problematic Cases}
+	At first glance, the presented accuracy and confusion measures from section~\ref{sec:class_comparison} might not seem very impressive. It is therefore worth looking at what the system fails to achieve and why that might be.
+	
+	
+	
+	\subsection{Solving the Real-Life Problem}
+	
+	\subsection{Removing Noisy Labels}
+	The problem of noisy data was tried to be tackled by selecting clean subsets of training data to improve the accuracy of the model. However in terms of log-loss on the test set, this proved to be counterproductive. It is likely that due to more homogeneous training sets the model became bad at handling noise (wrong or contentious labels) and was punished heavily for "wrong" classifications with high confidence.
 	
 	Comment on confusion matrices
 	
