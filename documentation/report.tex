@@ -52,7 +52,7 @@
 		
 	\begin{figure}
 		\centering		
-		\includegraphics[width=0.7\textwidth]{figures/thumbnail_dennery.png}
+		\includegraphics[width=0.68\textwidth]{figures/thumbnail_dennery.png}
 		\caption{Thumbnail of stitched drone image from Dennery, St.Lucia.}
 		\label{fig:thumbnail_dennery}
 	\end{figure}
@@ -130,8 +130,8 @@
 	\label{fig:mat_examples}
 	\end{figure}
 
-	\subsection{Data Noise}
-	
+	\subsection{Label Noise}
+	\label{sec:data_noise}
 	Unfortunately, class membership is sometimes ambiguous in the provided groundtruth data. 
 	First, labels are used inconsistently. This is especially true for "irregular" and "healthy metal". Where rusty roofs should be labeled as "irregular", many of them get a "healthy metal" label.
 	Moreover there is confusion about properties that make a roof "irregular" or "incomplete".
@@ -291,7 +291,7 @@
 		\label{tab:pb_vs_nn}
 	\end{center}
 	
-	The significant improvement in performance from pixel-based to deep features also becomes visible in ~\ref{fig:pixel_based_cm}. It shows the confusion matrices for both classifiers using a random split. When visually assessing the result, the class imbalances should be kept in mind. Only 4.5\% of the roofs carry the true label "incomple", 1.3\% "other". It becomes apparent that both classifiers struggle to identify the least represented classes correctly.
+	The significant improvement in performance from pixel-based to deep features also becomes visible in ~\ref{fig:pixel_based_cm}. It shows the confusion matrices for both classifiers using a random split. When visually assessing the result, the class imbalances should be kept in mind. Only 4.5\% of the roofs carry the true label "incomplete", 1.3\% "other". It becomes apparent that both classifiers struggle to identify the least represented classes correctly.
 	
 	\begin{figure}
 		\begin{subfigure}[t]{.5\textwidth}
@@ -307,38 +307,39 @@
 	\caption{Confusion Matrices for pixel-based vs. deep features on random split of the provided data (same split for both).}
 	\label{fig:pixel_based_cm}
 	\end{figure}
-	
+
+	\subsection{Removing Noisy Labels}
+	\label{sec:noisy_labels}
+	The problem of noisy data was tried to be tackled by selecting clean subsets of training data to improve the accuracy of the model. However in terms of log-loss on the test set, this proved to be counterproductive. It is likely that due to more homogeneous training sets the model became bad at handling noise (wrong or contentious labels) and was punished heavily for "wrong" classifications with high confidence.
 	
 	\section{Discussion}
 	\label{sec:discussion}
 	
-	\subsection{Analyzing Problematic Cases}
-	At first glance, the presented accuracy and confusion measures from section~\ref{sec:class_comparison} might not seem very impressive. It is therefore worth looking at what the system fails to achieve and why that might be.
-	
-	
-	
 	\subsection{Solving the Real-Life Problem}
+	At first glance, the presented accuracy and confusion measures from section~\ref{sec:class_comparison} might not seem very impressive. It is therefore worth looking at what the system fails to achieve, why that might be and what the implications for the real-life problem at hand are.
 	
-	\subsection{Removing Noisy Labels}
-	The problem of noisy data was tried to be tackled by selecting clean subsets of training data to improve the accuracy of the model. However in terms of log-loss on the test set, this proved to be counterproductive. It is likely that due to more homogeneous training sets the model became bad at handling noise (wrong or contentious labels) and was punished heavily for "wrong" classifications with high confidence.
-	
-	Comment on confusion matrices
-	
-	Comment on class imbalance
-	
-	
-	Discussion where you are critical about what has been done and what could be further explored. You have investigated a topic and achieving your initial goal is not always possible in a fixed time frame, however you should be able to assess your situation and what should then be done/improved in order to reach your goal.
+	\begin{enumerate}
+		\item "Incomplete" roofs: The recall on "incomplete" roofs is very low at only 30\%. As described in section~\ref{sec:data_noise}, the boundary between "irregular" and "incomplete" roofs is hard to define. Both types of roofs carry a higher than normal risk to be destroyed during natural hazards. The truly problematic cases when considering risk assessment are those 21\% that are labeled as "concrete" or "healthy metal" when they are actually incomplete.
+		
+		\item "Irregular metal" roofs: These roofs are classified as "healthy metal" with 21\% probability, which is bad for risk assessment. One cause for these errors could be the inconsistent labeling of rusty, but intact looking roofs as described in section~\ref{sec:data_noise}. Interestingly, roofs of "irregular metal" are very unlikely to be labeled as "incomplete" as opposed to vice versa. One explanation for this might be that there are eight times more training examples for "irregular" than for "incomplete", allowing for a better recall.
+		
+		\item "Other" roofs: It is unsurprising that this class has a low recall, since it is the most diverse and has very few training examples. It is reassuring that "other" roofs, which are intact, are almost never labeled as "incomplete". 
+	\end{enumerate}
+
+	When taking these aspects into account, many misclassifications actually seem excusable or at least not so harmful to the actual goal of the project. It should also be considered that the proposed method tried to minimize the log-loss metric. A real-life classification system should have a high recall of high-risk roofs, which might require changes to the pipeline.
 	
 	\subsection{Outlook}
-	Outlook: Retrain network
 	
-	Assess the "real performance" by cleaning up the noisy data
+	Further investigations should look at what the misclassified roofs have in common to improve relevant features. It might be worth to re-annotate parts of the data with more consistent labeling policies.
+	 
+	In order to extract features that are more relevant to distinguish roofs, the pretrained networks should be retrained to better fit the problem. Retraining was attempted during the project but could not be brought to satisfying results in the given time frame.
+	
+	Image statistics were surprisingly successful for some classes and might be combined with deep features in order to further enhance the classification result.
 	
 	\section{Appendix}
 
 	The used code is publicly accessible on GitHub, mostly in the form of Jupyter Notebooks \\
 	(see \url{https://github.com/jo-ruether/ipeo_carribean}).
-	
 	
 	\bibliography{ipeo} 
 	\bibliographystyle{ieeetr}
