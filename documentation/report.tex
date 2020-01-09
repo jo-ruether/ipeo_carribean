@@ -29,22 +29,22 @@
 	
 	\subsection{Context}
 	
-	Regions like the Carribean are regularly hit by rainstorms, floods or earthquakes. Despite being so prone, many houses in those areas are unable to withstand these natural hazards due to poor construction quality. This exposes their inhabitants to a great risk of becoming homeless during the next disaster. 
+	Regions like the Carribean are regularly hit by rainstorms, floods or earthquakes. Despite being so prone, many houses in those areas are unable to withstand these natural hazards due to poor construction quality. This exposes their inhabitants to a great risk of becoming homeless during the next natural disaster. 
 	
-	International programs as the World Bank's Global Program for Resilient Housing are making attempts to retrofit houses to the natural forces they are exposed to. In these large and often informal settlements it is difficult to assess which houses pose especially high risks due to their construction or are damaged and need repair. Exploring these areas on the ground is time consuming and costly. 
-	This is why the possibilities of image processing for automatic recognition of vulnerable houses on the basis of drone imagery is explored. Such a technology could assist building inspectors and narrow down large areas to those that are worth a closer inspection on the ground. 
-	The material that roofs are made up of is a central indicator of how well a house is prepared against natural disasters. Therefore, classifying roof material from aerial images is a key step to identify precarious houses. \\
+	International programs such as the World Bank's Global Program for Resilient Housing are making attempts to retrofit houses to the natural forces they are exposed to. In these large and often informal settlements it is difficult to assess which houses pose especially high risks due to their construction or are damaged and need repair. Exploring these areas on the ground is time-consuming and costly. 
+	This is why the possibilities of image processing for automatic recognition of vulnerable houses on the basis of drone imagery are explored. Such a technology could assist building inspectors and narrow down large areas to those that are worth a closer inspection on the ground. 
+	The material that a roof are made up of is a central indicator of how well a house is prepared against natural disasters. Therefore, classifying roof material from aerial images is a key step to identify precarious houses. \\
 	
 	\subsection{Open AI Challenge}
 	
-	The above background led to the initiation of the \textit{Open AI Caribbean Challenge: Mapping Disaster Risk from Aerial Imagery}, which was conducted in between October and December 2020 on \textit{drivendata.org}.	
+	The above reasons led to the initiation of the \textit{Open AI Caribbean Challenge: Mapping Disaster Risk from Aerial Imagery}, which was conducted between October and December 2020 on \textit{drivendata.org}.	
 	This report describes an approach to solve this challenge.\\
 	
 	\subsection{Previous Work}
 	
 	In many applications, the identification of roofs is considered useful. Roof segmentation is often done with LiDAR data, as presented in \cite{Chen2012}. Other papers such as \cite{Soman2019} have successfully attempted roof segmentation using only drone imagery, which is less costly. This step will become relevant for the task at hand. The approach discussed in this report however uses images of roofs that have already been segmented.\\
 	
-	The identification of roof defects has been addressed in previous works, e.g. \cite{Yudin2018}, in which water stagnation on roofs is measured. Multiple patents such as (e.g. \cite{Shreve2017}) employ aerial images to evaluate damage on individual roofs for insurance purposes. To my best knowledge, academic works on roof material and condition classification from drone imagery on a large scale have not been published. 
+	The identification of roof defects has been addressed in previous works, e.g. \cite{Yudin2018}, in which water stagnation on roofs is measured. Multiple patents (e.g. \cite{Shreve2017}) describe the use of aerial images to evaluate damage on individual roofs for insurance purposes. To my best knowledge, academic works on roof material and condition classification from drone imagery on a large scale have however not been published. 
 	
 	\section{Data Description}
 	
@@ -57,9 +57,9 @@
 		\label{fig:thumbnail_dennery}
 	\end{figure}
 
-	The data provided for the challenge consists of high resolution (~4cm) drone imagery of five patches of land: two from Soacha, Colombia, two from Mixco, Guatemala and one from Dennery (St. Lucia).
+	The data provided for the challenge consists of high resolution ($\sim4$cm) drone imagery of five patches of land: two from Soacha, Colombia, two from Mixco, Guatemala and one from Dennery (St. Lucia).
 	For every region, there is one stitched cloud-optimized GeoTIFF file, ranging from 500 to 1800 Megapixels in size. A thumbnail of the Dennery settlement is shown as example in Fig.~\ref{fig:thumbnail_dennery}.\\
-	General information about the images is summarized in Table~\ref{tab:general}
+	General information about the images is summarized in table~\ref{tab:general}.
 
 	\begin{center}
 		\bgroup
@@ -85,8 +85,7 @@
 	\end{center}
 	
 	\subsection{Labels}
-	
-	Roofs are labeled as one of five classes, examples of which are given in Fig.~\ref{fig:mat_examples}. There is a total of 14852 training examples, which are highly unbalanced throughout the classes.
+	Roofs are labeled as one of five classes, examples of which are given in Fig.~\ref{fig:mat_examples}. The footprints of roofs are provided for both training and test set, i.e. roof segmentations are always given. There is a total of 14852 training examples, which are highly unbalanced throughout the classes.
 	The log-loss as score for the \textit{Open AI Challenge} was computed on 7320 test images, for which class membership probabilities needed to be calculated.
 	
 	\begin{enumerate}
@@ -133,12 +132,12 @@
 
 	\subsection{Data Noise}
 	
-	Class membership is unfortunately sometimes ambiguous in the provided groundtruth data. 
-	First, labels are sometimes used inconsistently. This is especially true for "irregular" and "healthy metal". Where rusty roofs should be labeled as "irregular", many of them get a "healthy metal" label.
-	Moreover there is confusion about features that make a roof "irregular" or "incomplete".
+	Unfortunately, class membership is sometimes ambiguous in the provided groundtruth data. 
+	First, labels are used inconsistently. This is especially true for "irregular" and "healthy metal". Where rusty roofs should be labeled as "irregular", many of them get a "healthy metal" label.
+	Moreover there is confusion about properties that make a roof "irregular" or "incomplete".
 	These inconsistencies might stem from different annotators labeling images.
 	
-	Second, labels are sometimes clearly incorrect, e.g. concrete roofs are labeled as "healthy metal". Some regions seems to be annotated with more care than others. 
+	Second, labels are sometimes clearly incorrect, e.g. concrete roofs are labeled as "healthy metal". In that regard, some regions seem to be annotated with more care than others. 
 	
 	It is impossible to quantify the extent to which annotations are noisy. 
 	Some examples of these ambiguities are shown in Fig.~\ref{fig:ambiguities}.
@@ -231,7 +230,7 @@
 	In that context, $N$ was the number of test samples (=7320), $M$ the number of classes (=5), $y_{ij}$ the true label, i.e. 1 if observation $i$ belonged to class $j$ and 0 otherwise and $p_ij$ was the predicted probability that $i$ was of class $j$. 
 	
 	The best-performing setup consisted of a ResNet50 as feature extractor with average pooling at the end and classification using a SVM with a high regularization parameter $C=100$.
-	Other pretrained networks performed similarly well, although not quite as good. Results on the test in terms of log-loss are shown in Table~\ref{tab:model_comparison}.
+	Other pretrained networks performed similarly well, although not quite as good. Results on the test in terms of log-loss are shown in table~\ref{tab:model_comparison}.
 	The top score of 0.5554 corresponded to rank 51 in a field of 1425 competitors (top 4\%).
 	
 	\begin{center}
