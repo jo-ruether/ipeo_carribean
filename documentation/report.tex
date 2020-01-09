@@ -87,7 +87,8 @@
 	
 	\subsection{Labels}
 	
-	Roofs are labeled as one of five classes, examples of which are given in Fig.~\ref{fig:mat_examples}: 
+	Roofs are labeled as one of five classes, examples of which are given in Fig.~\ref{fig:mat_examples}. There is a total of 14852 training examples, which are highly unbalanced throughout the classes.
+	The log-loss as score for the \textit{Open AI Challenge} was computed on 7320 test images, for which class membership probabilities needed to be calculated.
 	
 	\begin{enumerate}
 		\itemsep0em
@@ -197,6 +198,7 @@
 	\end{figure}
 
 	\subsection{Pixel-based Baseline } 
+	\label{sec:pixel_based}
 	As a baseline for comparison, several statistical metrics are extracted as features and classified with a SVM. The mean is used to assess the dominant colors on a roof. Heterogeneity is tried to measure using the standard deviation and range of every image. Every metric is calculated on every color channel and on the absolute of the Sobel-filtered image in x- and y-direction of every color channel (see Fig.~\ref{fig:pixel_based}). This results in a 18-dimensional feature vector (3 metrics $\times$ 3 channels on original and gradient image).
 	
 	\begin{figure}
@@ -216,15 +218,24 @@
 	
 	\section{Results}
 	
-	Best results obtained with average pooling instead of Max
-	All with SVM, C=100
+	\subsection{Online Challenge Performance}
 	
-	More data was better -> no improvement when handpicking because test set was noisy as well.
+	During the \textit{Open AI challenge}, system performance was evaluated using the log loss:
+	
+	\begin{equation}
+		loss = -\frac{1}{N}\cdot \sum_{i=1}^{N} \sum_{j=1}^{M}y_{ij}\log p_{ij}
+	\end{equation}
+	
+	In that context, $N$ was the number of test samples (=7320), $M$ the number of classes (=5), $y_{ij}$ the true label, i.e. 1 if observation $i$ belonged to class $j$ and 0 otherwise and $p_ij$ was the predicted probability that $i$ was of class $j$. 
+	
+	The best-performing setup consisted of a ResNet50 as feature extractor with average pooling at the end and classification using a SVM with a high regularization parameter $C=100$.
+	Other pretrained networks performed similarly well, although not quite as good. Results on the test in terms of log-loss are shown in Table~\ref{tab:model_comparison}.
+	The top score of 0.5554 corresponded to rank 51 in a field of 1425 competitors (top 4\%).
 	
 	\begin{center}
 		\bgroup
 		\def\arraystretch{1.1}
-		\begin{tabular}{ | m{5cm} | m{2cm} | } 
+		\begin{tabular}{ | m{4cm} | m{2cm} | } 
 			
 			\hline
 			Pretrained model & Log-loss \\
@@ -240,10 +251,21 @@
 			\hline
 		\end{tabular}
 		\egroup
-		\captionof{table}{Log-loss on online challenge test set for feature extraction with different pretrained models. Classification was always performed with an SVM.} 
+		\captionof{table}{Log-loss on online challenge test set for feature extraction with different pretrained models. Classification was always performed with an SVM using $C=100$.} 
 		\label{tab:model_comparison}
 	\end{center}
+
 	
+	\subsection{Removing Noisy Labels}
+	The problem of noisy data was tried to be tackled by selecting clean subsets of training data to improve the accuracy of the model. However in terms of log-loss on the test set, this proved to be counterproductive. It is likely that due to more homogeneous training sets, the model became bad at handling noise (wrong or contentious labels) and was punished heavily for "wrong" classifications with high confidence.
+	
+	\subsection{Comparing Performances}
+	
+	Since classification performance measures require groundtruth data, the previously so-called "training set" provided for the challenge was split into new training and test sets for the evaluation.
+		
+	To assess the difficulty of the task and the improvement through features extracted by neural networks, the system performance was compared against the pixel-based approach described in section~\ref{sec:pixel_based}.
+	Moreover, the Support Vector Machine as the best-performing classifier was tested against a Random Forest model.
+	%Computation times for classifier training increases drastically with the amount of considered features. Furthermore, eliminating irrelevant features can improve classification. Feature importance can be easily ranked...
 	
 	\begin{center}
 		\bgroup
@@ -251,14 +273,14 @@
 		\begin{tabular}{ | m{5cm} | m{2cm} | m{2cm} | m{2cm} |} 
 			
 			\hline
-			Method & Log-loss & Accuracy & Micro-F1 \\
+			Method & Avg. Log-loss & Avg. Accuracy & Avg. Macro-F1 \\
 			\hline
 			\hline
 			Pixel-based features + SVM & & &  \\
 			\hline
 			Pixel-based features + RF & & &  \\
 			\hline
-			ResNet50 + SVM & & &  \\
+			ResNet50 + SVM & 0.57 & 0.76 & 0.63 \\
 			\hline
 			ResNet50 + RF & & &  \\
 			\hline
@@ -267,7 +289,6 @@
 		\captionof{table}{Performance metrics of best-performing pixel-based and suggested processing routines} 
 		\label{tab:pb_vs_nn}
 	\end{center}
-	
 	
 	
 	Confusion matrices for one split but for the same split
@@ -284,17 +305,15 @@
 			\includegraphics[width=0.9\textwidth]{figures/results/nn_based_cm.png}
 			\caption{ResNet50 features classified by SVM}
 		\end{subfigure}
-	\caption{Confusion Matrices}
+	\caption{Confusion Matrices for a random split of the provided data.}
 	\label{fig:pixel_based_cm}
 	\end{figure}
 	
-	One example confusion matrix for NN and PB
 	
 	Accuracy and F1-score
 	
 	Map with colored rectangles indicating roof security
 	
-	The proposed processing routine was designed to achieve good results in terms of log-loss.
 	
 	\textbf{Calculate the log loss!!}
 	
@@ -306,10 +325,10 @@
 	\label{sec:discussion}
 	Discussion where you are critical about what has been done and what could be further explored. You have investigated a topic and achieving your initial goal is not always possible in a fixed time frame, however you should be able to assess your situation and what should then be done/improved in order to reach your goal.
 	
+	\subsection{Outlook}
 	Outlook: Retrain network
 	
-	
-	!!!Noisy Data!!!
+	Assess the "real performance" by cleaning up the noisy data
 	
 	\section{Appendix}
 	APPENDIX: Include your scripts (Matlab, GoogleEarthEngine or others) and the specific functions you used in QGIS (if applicable)
