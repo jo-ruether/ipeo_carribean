@@ -5,7 +5,10 @@
 \usepackage{subcaption} 
 \usepackage{textcomp}
 \usepackage{caption}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 \usepackage{graphicx}
+\usepackage[ngerman]{babel}
 \usepackage{hyperref}
 \usepackage[top=0.8in, bottom=0.8in, left=0.8in, right=0.8in]{geometry}
 % Add other packages here %
@@ -17,7 +20,7 @@
 % Put your group number and names in the author field %
 \title{\bf{Classifying Roof Material From Drone Imagery} \\
  An Approach to the Open AI Caribbean Challenge}
-\author{Johannes Leonhard Ruether}
+\author{Johannes Leonhard Rüther}
 
 
 % N.B.: The report should not be longer than 3 pages 
@@ -33,18 +36,18 @@
 	
 	International programs such as the World Bank's Global Program for Resilient Housing are making attempts to retrofit houses to the natural forces they are exposed to. In these large and often informal settlements it is difficult to assess which houses pose especially high risks due to their construction or are damaged and need repair. Exploring these areas on the ground is time-consuming and costly. 
 	This is why the possibilities of image processing for automatic recognition of vulnerable houses on the basis of drone imagery are explored. Such a technology could assist building inspectors and narrow down large areas to those that are worth a closer inspection on the ground. 
-	The material that a roof are made up of is a central indicator of how well a house is prepared against natural disasters. Therefore, classifying roof material from aerial images is a key step to identify precarious houses. \\
+	The material that a roof is made up of is a central indicator for how well a house is prepared against natural disasters. Therefore, classifying roof material from aerial images is a key step to identify precarious houses. \\
 	
 	\subsection{Open AI Challenge}
 	
-	The above reasons led to the initiation of the \textit{Open AI Caribbean Challenge: Mapping Disaster Risk from Aerial Imagery}, which was conducted between October and December 2020 on \textit{drivendata.org}.	
+	The above background led to the initiation of the \textit{Open AI Caribbean Challenge: Mapping Disaster Risk from Aerial Imagery}, which was conducted between October and December 2019 on \textit{drivendata.org}.	
 	This report describes an approach to solve this challenge.\\
 	
 	\subsection{Previous Work}
 	
-	In many applications, the identification of roofs is considered useful. Roof segmentation is often done with LiDAR data, as presented in \cite{Chen2012}. Other papers such as \cite{Soman2019} have successfully attempted roof segmentation using only drone imagery, which is less costly. This step will become relevant for the task at hand. The approach discussed in this report however uses images of roofs that have already been segmented.\\
+	In many applications, the identification of roofs is considered useful. Roof segmentation is often done with LiDAR data, as presented in \cite{Chen2012}. Other papers such as \cite{Soman2019} have successfully attempted roof segmentation using only drone imagery, which is less costly. This step will at some point become relevant for the task at hand. The approach discussed in this report however uses images of roofs that have already been segmented.\\
 	
-	The identification of roof defects has been addressed in previous works, e.g. \cite{Yudin2018}, in which water stagnation on roofs is measured. Multiple patents (e.g. \cite{Shreve2017}) describe the use of aerial images to evaluate damage on individual roofs for insurance purposes. To my best knowledge, academic works on roof material and condition classification from drone imagery on a large scale have however not been published. 
+	The identification of roof defects has been addressed in previous works, e.g. \cite{Yudin2018}, in which water stagnation on roofs was measured. Multiple patents (e.g. \cite{Shreve2017}) describe the use of aerial images to evaluate damage on individual roofs for insurance purposes. To my best knowledge, academic works on roof material and condition classification from drone imagery on a large scale have however not been published. 
 	
 	\section{Data Description}
 	
@@ -57,7 +60,7 @@
 		\label{fig:thumbnail_dennery}
 	\end{figure}
 
-	The data provided for the challenge consists of high resolution ($\sim4$cm) drone imagery of five patches of land: two from Soacha, Colombia, two from Mixco, Guatemala and one from Dennery (St. Lucia).
+	The data provided for the challenge consists of high resolution ($\sim4$cm) drone imagery of five patches of land: two from Soacha, Colombia, two from Mixco, Guatemala and one from Dennery, St. Lucia.
 	For every region, there is one stitched cloud-optimized GeoTIFF file, ranging from 500 to 1800 Megapixels in size. A thumbnail of the Dennery settlement is shown as example in Fig.~\ref{fig:thumbnail_dennery}.\\
 	General information about the images is summarized in table~\ref{tab:general}.
 
@@ -76,7 +79,7 @@
 			\hline
 			Spatial/Spectral resolution & 3.8-4.5cm, RGB  \\ 
 			\hline
-			Type of Product & Cloud-optimized GeoTIFF \\ 
+			Format & Cloud-optimized GeoTIFF \\ 
 			\hline
 		\end{tabular}
 		\egroup		
@@ -85,7 +88,7 @@
 	\end{center}
 	
 	\subsection{Labels}
-	Roofs are labeled as one of five classes, examples of which are given in Fig.~\ref{fig:mat_examples}. The footprints of roofs are provided for both training and test set, i.e. roof segmentations are always given. There is a total of 14852 training examples, which are highly unbalanced throughout the classes.
+	Roofs are labeled as one of five classes, examples of which are given in Fig.~\ref{fig:mat_examples}. The footprints of roofs are provided for both training and test set, i.e. roof segmentations are always given. There is a total of 14852 training examples with highly unbalanced classes.
 	The log-loss as score for the \textit{Open AI Challenge} was computed on 7320 test images, for which class membership probabilities needed to be calculated.
 	
 	\begin{enumerate}
@@ -133,7 +136,7 @@
 	\subsection{Label Noise}
 	\label{sec:data_noise}
 	Unfortunately, class membership is sometimes ambiguous in the provided groundtruth data. 
-	First, labels are used inconsistently. This is especially true for "irregular" and "healthy metal". Where rusty roofs should be labeled as "irregular", many of them get a "healthy metal" label.
+	First, labels are used inconsistently. This is especially true for "irregular" and "healthy metal". Where rusty roofs should be labeled as "irregular", many of them carry a "healthy metal" label.
 	Moreover there is confusion about properties that make a roof "irregular" or "incomplete".
 	These inconsistencies might stem from different annotators labeling images.
 	
@@ -180,7 +183,7 @@
 	
 	\subsection{Pixel-based Baseline} 
 	\label{sec:pixel_based}
-	As a baseline for comparison, several statistical metrics were extracted as "naive" features and classified using a SVM or RF. The mean is used to assess the dominant colors on a roof. Heterogeneity is tried to be measured using the standard deviation and range. Every metric is calculated on every color channel and on the absolute of the Sobel-filtered image in x- and y-direction of every color channel (see Fig.~\ref{fig:pixel_based}). This results in a 18-dimensional feature vector (3 metrics $\times$ 3 channels on original and gradient image).
+	As a baseline for comparison, several statistical metrics were extracted as "naive" features and classified using a Support Vector Machine (SVM) or Random Forest Model (RF). The mean was used to assess the dominant colors on a roof. Heterogeneity was tried to be measured using the standard deviation and value range. Every metric was calculated on every color channel and on the absolute of the Sobel-filtered image in x- and y-direction of every channel (see Fig.~\ref{fig:pixel_based}). This results in a 18-dimensional feature vector (3 metrics $\times$ 3 channels on original and gradient image).
 	
 	\begin{figure}
 		\centering
@@ -201,10 +204,10 @@
 	\subsection{Petrained Neural Network as Feature Extractor}
 	The proposed processing routine uses a pretrained neural network as feature extractor. Different publicly available architectures, such as ResNet50~\cite{resnet}, InceptionV3~\cite{inceptionv3}, DenseNet201~\cite{densenet} and VGG16~\cite{vgg} were tested. The employed architectures were each trained on more than a million images of 1000 categories from the ImageNet database ~\cite{imagenet}. 
 	
-	ImageNet is a collection of natural images of everyday objects and animals. Although roofs are of course different from animals and other objects, natural images share a lot of common features. The features which are relevant to distinguish classes in ImageNet, are very likely to be also relevant to discriminate other types of natural images, such as roofs.
+	ImageNet is a collection of natural images of everyday objects and animals. Although roofs are of course different from animals and other objects, natural images share a lot of common features. The features which are relevant to distinguish classes in ImageNet are very likely to be also relevant to discriminate other types of natural images, such as roofs.
 	In order to obtain features, the classification layer were removed and replaced by an average or maximum pooling layer to reduce the number of features.\\	
 	
-	In the next step, a Support Vector Machine (SVM) or Random Forest (RF) was trained to classify roof materials based on the extracted features. The calculated classification could then be used to predict class membership based on features of test samples. The \textit{scikit-learn} implementation of both SVM and RF provide pseudo-probabilities that take a samples' distance to the decision boundary into account. Those probabilities/confidences were submitted for evaluation on the challenge website.
+	In the next step, a a SVM or RF was trained to classify roof materials based on the extracted features. The calculated classification could then be used to predict class membership based on features of test samples. The \textit{scikit-learn} implementation of both SVM and RF provide pseudo-probabilities that take a samples' distance to the decision boundary into account. Those probabilities/confidences were submitted for evaluation on the challenge website.
 	The full classification pipeline is presented in Fig.~\ref{fig:flowchart}.	
 	
 	\begin{figure}
@@ -217,7 +220,7 @@
 
 	\section{Results}
 	
-	Before investigating results it has to be clarified that the performance of the suggested system was optimized to perform well in the described \textit{Open AI Challenge}. The predictions to be submitted were class membership probabilities and not hard labels. Since the algorithm is supposed to hint at high risk roofs to be revisited by a human instructor instead of indicating one clear action, this seems reasonable. In section~\ref{sec:challenge_perf}, the system's performance on the challenge test set is presented. Section~\ref{sec:class_comparison} shows results for which the annotated part of the data was used to compare the best-performing system to other approaches.
+	Before investigating results it has to be clarified that the performance of the suggested system was optimized to perform well in the described \textit{Open AI Challenge}. The predictions to be submitted were class membership probabilities and not hard labels. Since the algorithm is supposed to hint at high risk roofs to be revisited by a human instructor, this seems reasonable. In section~\ref{sec:challenge_perf}, the system's performance on the challenge test set is presented. Section~\ref{sec:class_comparison} shows results for which the annotated part of the data was used to compare the best-performing system to other approaches using more metrics.
 	
 	\subsection{Online Challenge Performance}
 	\label{sec:challenge_perf}
@@ -229,7 +232,7 @@
 		\label{eq:log_loss}
 	\end{equation}
 	
-	In that context, $N$ was the number of test samples (=7320), $M$ the number of classes (=5), $y_{ij}$ the true label (i.e. 1 if observation $i$ belonged to class $j$ and 0 otherwise) and $p_{ij}$ was the predicted probability that $i$ was of class $j$. 
+	In that context, $N$ was the number of test samples (=7320), $M$ the number of classes (=5), $y_{ij}$ the true label (i.e. 1 if observation $i$ belonged to class $j$ and 0 otherwise) and $p_{ij}$ the predicted probability that $i$ was of class $j$. 
 	
 	The best-performing setup consisted of a ResNet50 as feature extractor with average pooling at the end and classification using a SVM with a high regularization parameter $C=100$.
 	Other pretrained networks performed similarly well, although not quite as good. Results on the test in terms of log-loss are shown in table~\ref{tab:model_comparison}.
@@ -291,7 +294,7 @@
 		\label{tab:pb_vs_nn}
 	\end{center}
 	
-	The significant improvement in performance from pixel-based to deep features also becomes visible in ~\ref{fig:pixel_based_cm}. It shows the confusion matrices for both classifiers using a random split. When visually assessing the result, the class imbalances should be kept in mind. Only 4.5\% of the roofs carry the true label "incomplete", 1.3\% "other". It becomes apparent that both classifiers struggle to identify the least represented classes correctly.
+	The significant improvement in performance from pixel-based to deep features also becomes visible in Fig.~\ref{fig:pixel_based_cm}. It shows the confusion matrices for both classifiers using a random split. When visually assessing the result, the class imbalances should be kept in mind: only 4.5\% of the roofs carry the groundtruth label "incomplete", 1.3\% "other". It becomes apparent that both classifiers struggle to identify the least represented classes correctly.
 	
 	\begin{figure}
 		\begin{subfigure}[t]{.5\textwidth}
@@ -319,22 +322,24 @@
 	At first glance, the presented accuracy and confusion measures from section~\ref{sec:class_comparison} might not seem very impressive. It is therefore worth looking at what the system fails to achieve, why that might be and what the implications for the real-life problem at hand are.
 	
 	\begin{enumerate}
-		\item "Incomplete" roofs: The recall on "incomplete" roofs is very low at only 30\%. As described in section~\ref{sec:data_noise}, the boundary between "irregular" and "incomplete" roofs is hard to define. Both types of roofs carry a higher than normal risk to be destroyed during natural hazards. The truly problematic cases when considering risk assessment are those 21\% that are labeled as "concrete" or "healthy metal" when they are actually incomplete.
+		\item "Incomplete" roofs: The recall on "incomplete" roofs is very low at only 30\%. As described in section~\ref{sec:data_noise}, the boundary between "irregular" and "incomplete" roofs is hard to define. Both types of roofs carry a higher than normal risk to be destroyed during natural hazards. With respect to that the misclassification of "incomplete" as "irregular" might be excusable. The truly problematic cases when considering risk assessment are those 21\% that are labeled as "concrete" or "healthy metal" when they are actually heavily damaged.
 		
 		\item "Irregular metal" roofs: These roofs are classified as "healthy metal" with 21\% probability, which is bad for risk assessment. One cause for these errors could be the inconsistent labeling of rusty, but intact looking roofs as described in section~\ref{sec:data_noise}. Interestingly, roofs of "irregular metal" are very unlikely to be labeled as "incomplete" as opposed to vice versa. One explanation for this might be that there are eight times more training examples for "irregular" than for "incomplete", allowing for a better recall.
 		
-		\item "Other" roofs: It is unsurprising that this class has a low recall, since it is the most diverse and has very few training examples. It is reassuring that "other" roofs, which are intact, are almost never labeled as "incomplete". 
+		\item "Other" roofs: It is unsurprising that this class has a low recall, since it is the most diverse class and has very few training examples. It is reassuring that "other" roofs, which are intact, are almost never labeled as "incomplete". 
 	\end{enumerate}
 
 	When taking these aspects into account, many misclassifications actually seem excusable or at least not so harmful to the actual goal of the project. It should also be considered that the proposed method tried to minimize the log-loss metric. A real-life classification system should have a high recall of high-risk roofs, which might require changes to the pipeline.
 	
 	\subsection{Outlook}
 	
-	Further investigations should look at what the misclassified roofs have in common to improve relevant features. It might be worth to re-annotate parts of the data with more consistent labeling policies.
-	 
-	In order to extract features that are more relevant to distinguish roofs, the pretrained networks should be retrained to better fit the problem. Retraining was attempted during the project but could not be brought to satisfying results in the given time frame.
+	Further investigations should look at what the misclassified roofs have in common to improve relevant features. It might be worth to re-annotate parts of the data with more consistent labeling policies.\\
 	
-	Image statistics were surprisingly successful for some classes and might be combined with deep features in order to further enhance the classification result.
+	Since image statistics were surprisingly successful for some classes they might be combined with deep features in order to further enhance the classification result.\\
+	 
+	In order to extract features that are more relevant to distinguish roofs, the pretrained networks should be retrained to better fit the problem. Retraining was attempted during the project but could not be brought to satisfying results in the given time frame.\\
+	
+
 	
 	\section{Appendix}
 
