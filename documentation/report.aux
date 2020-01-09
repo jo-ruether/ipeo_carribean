@@ -1,49 +1,75 @@
 \relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
+\HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldcontentsline\contentsline
+\gdef\contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
+\global\let\oldnewlabel\newlabel
+\gdef\newlabel#1#2{\newlabelxx{#1}#2}
+\gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
+\AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\contentsline\oldcontentsline
+\let\newlabel\oldnewlabel
+\fi}
+\fi}
+\global\let\hyper@last\relax 
+\gdef\HyperFirstAtBeginDocument#1{#1}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
 \citation{Chen2012}
 \citation{Soman2019}
 \citation{Yudin2018}
 \citation{Shreve2017}
-\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction (Context and Challenges)}{1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Context}{1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.2}Open AI Challenge}{1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.3}Previous Work}{1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Thumbnail of stitched drone image from Dennery, St.Lucia.\relax }}{2}}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction (Context and Challenges)}{1}{section.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Context}{1}{subsection.1.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2}Open AI Challenge}{1}{subsection.1.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3}Previous Work}{1}{subsection.1.3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Thumbnail of stitched drone image from Dennery, St.Lucia.\relax }}{2}{figure.caption.1}}
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{fig:thumbnail_dennery}{{1}{2}}
-\@writefile{toc}{\contentsline {section}{\numberline {2}Data Description}{2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Images}{2}}
-\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces General information about provided data.\relax }}{2}}
-\newlabel{tab:general}{{1}{2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Labels}{2}}
+\newlabel{fig:thumbnail_dennery}{{1}{2}{Thumbnail of stitched drone image from Dennery, St.Lucia.\relax }{figure.caption.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Data Description}{2}{section.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Images}{2}{subsection.2.1}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces General information about provided data.\relax }}{2}{table.1}}
+\newlabel{tab:general}{{1}{2}{General information about provided data.\relax }{table.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Labels}{2}{subsection.2.2}}
 \citation{resnet}
 \citation{inceptionv3}
 \citation{densenet}
 \citation{vgg}
 \citation{imagenet}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Example images for each material class. (Scales differ)\relax }}{3}}
-\newlabel{fig:mat_examples}{{2}{3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Data Noise}{3}}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Proposed Processing Routine}{3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Petrained Neural Network as Feature Extractor}{3}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces (a) and (b) named differently due to incoherent labeling of rusty roofs. Similarly unclear boundary between "irregular metal" and "incomplete" ((d) and (e)). Obvious labeling error in (c).\relax }}{4}}
-\newlabel{fig:ambiguities}{{3}{4}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Pixel-based Baseline }{4}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Results}{4}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Proposed processing routine: The classification part of a pretrained neural network is removed, leaving the feature extraction. A SVM or RF is used to build a model out of the training features and the groundtruth labels in an iterative process. Test features are fed into this model to predict labels and determine prediction confidence.\relax }}{5}}
-\newlabel{fig:flowchart}{{4}{5}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Original image classified as "other" with red, green and blue individual channels (top row).   Gradient images of each channel (bottom row)\relax }}{5}}
-\newlabel{fig:pixel_based}{{5}{5}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Confusion Matrices\relax }}{6}}
-\newlabel{fig:pixel_based_cm}{{6}{6}}
-\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Log-loss on online challenge test set for feature extraction with different pretrained models. Classification was always performed with an SVM.\relax }}{6}}
-\newlabel{tab:model_comparison}{{2}{6}}
-\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Performance metrics of best-performing pixel-based and suggested processing routines\relax }}{6}}
-\newlabel{tab:pb_vs_nn}{{3}{6}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Pixel-based Baseline}{6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Example images for each material class. (Scales differ)\relax }}{3}{figure.caption.2}}
+\newlabel{fig:mat_examples}{{2}{3}{Example images for each material class. (Scales differ)\relax }{figure.caption.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Data Noise}{3}{subsection.2.3}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Proposed Processing Routine}{3}{section.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Petrained Neural Network as Feature Extractor}{3}{subsection.3.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces (a) and (b) named differently due to incoherent labeling of rusty roofs. Similarly unclear boundary between "irregular metal" and "incomplete" ((d) and (e)). Obvious labeling error in (c).\relax }}{4}{figure.caption.3}}
+\newlabel{fig:ambiguities}{{3}{4}{(a) and (b) named differently due to incoherent labeling of rusty roofs. Similarly unclear boundary between "irregular metal" and "incomplete" ((d) and (e)). Obvious labeling error in (c).\relax }{figure.caption.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Proposed processing routine: The classification part of a pretrained neural network is removed, leaving the feature extraction. A SVM or RF is used to build a model out of the training features and the groundtruth labels in an iterative process. Test features are fed into this model to predict labels and determine prediction confidence.\relax }}{4}{figure.caption.4}}
+\newlabel{fig:flowchart}{{4}{4}{Proposed processing routine: The classification part of a pretrained neural network is removed, leaving the feature extraction. A SVM or RF is used to build a model out of the training features and the groundtruth labels in an iterative process. Test features are fed into this model to predict labels and determine prediction confidence.\relax }{figure.caption.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Original image classified as "other" with red, green and blue individual channels (top row).   Gradient images of each channel (bottom row)\relax }}{5}{figure.caption.5}}
+\newlabel{fig:pixel_based}{{5}{5}{Original image classified as "other" with red, green and blue individual channels (top row). \\ Gradient images of each channel (bottom row)\relax }{figure.caption.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Pixel-based Baseline }{5}{subsection.3.2}}
+\newlabel{sec:pixel_based}{{3.2}{5}{Pixel-based Baseline}{subsection.3.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Results}{5}{section.4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Online Challenge Performance}{5}{subsection.4.1}}
+\newlabel{sec:challenge_perf}{{4.1}{5}{Online Challenge Performance}{subsection.4.1}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Log-loss on online challenge test set for feature extraction with different pretrained models. Classification was always performed with an SVM using $C=100$.\relax }}{6}{table.2}}
+\newlabel{tab:model_comparison}{{2}{6}{Log-loss on online challenge test set for feature extraction with different pretrained models. Classification was always performed with an SVM using $C=100$.\relax }{table.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Removing Noisy Labels}{6}{subsection.4.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Comparing Performances}{6}{subsection.4.3}}
+\newlabel{sec:class_comparison}{{4.3}{6}{Comparing Performances}{subsection.4.3}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Performance metrics of best-performing pixel-based and suggested processing routines. (Note, that a lower log-loss indicates a better result)\relax }}{6}{table.3}}
+\newlabel{tab:pb_vs_nn}{{3}{6}{Performance metrics of best-performing pixel-based and suggested processing routines. (Note, that a lower log-loss indicates a better result)\relax }{table.3}{}}
 \bibdata{ipeo}
 \bibcite{Chen2012}{1}
 \bibcite{Soman2019}{2}
 \bibcite{Yudin2018}{3}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Confusion Matrices for pixel-based vs. deep features on random split of the provided data (same split for both).\relax }}{7}{figure.caption.6}}
+\newlabel{fig:pixel_based_cm}{{6}{7}{Confusion Matrices for pixel-based vs. deep features on random split of the provided data (same split for both).\relax }{figure.caption.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Discussion}{7}{section.5}}
+\newlabel{sec:discussion}{{5}{7}{Discussion}{section.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Outlook}{7}{subsection.5.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Appendix}{7}{section.6}}
 \bibcite{Shreve2017}{4}
 \bibcite{resnet}{5}
 \bibcite{inceptionv3}{6}
@@ -51,6 +77,3 @@
 \bibcite{vgg}{8}
 \bibcite{imagenet}{9}
 \bibstyle{ieeetr}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Discussion}{7}}
-\newlabel{sec:discussion}{{5}{7}}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Appendix}{7}}

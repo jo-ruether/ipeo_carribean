@@ -6,6 +6,7 @@
 \usepackage{textcomp}
 \usepackage{caption}
 \usepackage{graphicx}
+\usepackage{hyperref}
 \usepackage[top=0.8in, bottom=0.8in, left=0.8in, right=0.8in]{geometry}
 % Add other packages here %
 
@@ -39,8 +40,6 @@
 	The above background led to the initiation of the \textit{Open AI Caribbean Challenge: Mapping Disaster Risk from Aerial Imagery}, which was conducted in between October and December 2020 on \textit{drivendata.org}.	
 	This report describes an approach to solve this challenge.\\
 	
-	\textbf{Probabilities instead of hard labels}
-	
 	\subsection{Previous Work}
 	
 	In many applications, the identification of roofs is considered useful. Roof segmentation is often done with LiDAR data, as presented in \cite{Chen2012}. Other papers such as \cite{Soman2019} have successfully attempted roof segmentation using only drone imagery, which is less costly. This step will become relevant for the task at hand. The approach discussed in this report however uses images of roofs that have already been segmented.\\
@@ -53,7 +52,7 @@
 		
 	\begin{figure}
 		\centering		
-		\includegraphics[width=0.8\textwidth]{figures/thumbnail_dennery.png}
+		\includegraphics[width=0.7\textwidth]{figures/thumbnail_dennery.png}
 		\caption{Thumbnail of stitched drone image from Dennery, St.Lucia.}
 		\label{fig:thumbnail_dennery}
 	\end{figure}
@@ -147,28 +146,28 @@
 	
 	\begin{figure}
 		\centering
-		\begin{subfigure}[c]{0.31\textwidth}
+		\begin{subfigure}[c]{0.27\textwidth}
 			\centering
 			\includegraphics[width=.72\textwidth]{figures/wrong_labels/hm_rusty.png}
 			\subcaption{"healthy metal"}	
 		\end{subfigure}	
-		\begin{subfigure}[c]{0.31\textwidth}
+		\begin{subfigure}[c]{0.27\textwidth}
 			\centering
 			\includegraphics[width=.72\textwidth]{figures/wrong_labels/irr_rusty.png}
 			\subcaption{"irregular metal"}
 		\end{subfigure}
-		\begin{subfigure}[c]{0.31\textwidth}
+		\begin{subfigure}[c]{0.27\textwidth}
 			\centering
 			\includegraphics[width=.9\textwidth]{figures/wrong_labels/hm_should_be_conc.png}
 			\subcaption{Labeled "irregular metal" where clearly concrete}
 		\end{subfigure}
 		\vspace{.3cm}]
-		\begin{subfigure}[c]{0.4\textwidth}
+		\begin{subfigure}[c]{0.35\textwidth}
 			\centering
 			\includegraphics[width=0.67\textwidth]{figures/wrong_labels/irr_holes.png}
 			\subcaption{Labeled "irregular metal"}
 		\end{subfigure}
-		\begin{subfigure}[c]{0.4\textwidth}
+		\begin{subfigure}[c]{0.35\textwidth}
 			\centering		
 			\includegraphics[width=0.72\textwidth]{figures/wrong_labels/inc_holes.png}
 			\subcaption{Labeled "incomplete"}
@@ -218,9 +217,12 @@
 	
 	\section{Results}
 	
-	\subsection{Online Challenge Performance}
+	Before investigating results it has to be clarified that the performance of the suggested system was optimized to perform well in the described \textit{Open AI challenge}. The predictions to be submitted were class membership probabilities and not hard labels. Since the algorithm is supposed to just hint at high risk roofs to be revisited by a human instructor instead of indicating one clear action, this seems reasonable. In section~\ref{sec:challenge_perf}, the challenge performance is presented. Section~\ref{sec:class_comparison} shows results that used only the training data to compare the system to other classifiers using more metrics.
 	
-	During the \textit{Open AI challenge}, system performance was evaluated using the log loss:
+	\subsection{Online Challenge Performance}
+	\label{sec:challenge_perf}
+	
+	For the \textit{Open AI challenge}, system performance was evaluated using the log loss:
 	
 	\begin{equation}
 		loss = -\frac{1}{N}\cdot \sum_{i=1}^{N} \sum_{j=1}^{M}y_{ij}\log p_{ij}
@@ -260,11 +262,11 @@
 	The problem of noisy data was tried to be tackled by selecting clean subsets of training data to improve the accuracy of the model. However in terms of log-loss on the test set, this proved to be counterproductive. It is likely that due to more homogeneous training sets, the model became bad at handling noise (wrong or contentious labels) and was punished heavily for "wrong" classifications with high confidence.
 	
 	\subsection{Comparing Performances}
-	
+	\label{sec:class_comparison}
 	Since classification performance measures require groundtruth data, the previously so-called "training set" provided for the challenge was split into new training and test sets for the evaluation.
 		
 	To assess the difficulty of the task and the improvement through features extracted by neural networks, the system performance was compared against the pixel-based approach described in section~\ref{sec:pixel_based}.
-	Moreover, the Support Vector Machine as the best-performing classifier was tested against a Random Forest model.
+	Moreover, the Support Vector Machine as the best-performing classifier was tested against a Random Forest model. For both classification methods, parameters were empirically optimized. For SVM a value of $C=100$ was found to work well. As for RF, 1000 trees were trained with a maximum depth of 16. 
 	%Computation times for classifier training increases drastically with the amount of considered features. Furthermore, eliminating irrelevant features can improve classification. Feature importance can be easily ranked...
 	
 	\begin{center}
@@ -276,23 +278,21 @@
 			Method & Avg. Log-loss & Avg. Accuracy & Avg. Macro-F1 \\
 			\hline
 			\hline
-			Pixel-based features + SVM & & &  \\
+			Pixel-based features + SVM & 0.82 & 0.68 & 0.49  \\
 			\hline
-			Pixel-based features + RF & & &  \\
+			Pixel-based features + RF & 0.80 & 0.68 & 0.38  \\
 			\hline
 			ResNet50 + SVM & 0.57 & 0.76 & 0.63 \\
 			\hline
-			ResNet50 + RF & & &  \\
+			ResNet50 + RF & 0.70 & 0.75 & 0.45  \\
 			\hline
 		\end{tabular}
 		\egroup
-		\captionof{table}{Performance metrics of best-performing pixel-based and suggested processing routines} 
+		\captionof{table}{Performance metrics of best-performing pixel-based and suggested processing routines. (Note, that a lower log-loss indicates a better result)} 
 		\label{tab:pb_vs_nn}
 	\end{center}
 	
-	
-	Confusion matrices for one split but for the same split
-	\subsection{Pixel-based Baseline}
+	The significant improvement in performance from pixel-based to deep features also becomes visible in ~\ref{fig:pixel_based_cm}. It shows the confusion matrices for both classifiers using a random split. When visually assessing the result, the class imbalances should be kept in mind. Only 4.5\% of the roofs carry the true label "incomple", 1.3\% "other". It becomes apparent that both classifiers struggle to identify the least represented classes correctly.
 	
 	\begin{figure}
 		\begin{subfigure}[t]{.5\textwidth}
@@ -305,24 +305,21 @@
 			\includegraphics[width=0.9\textwidth]{figures/results/nn_based_cm.png}
 			\caption{ResNet50 features classified by SVM}
 		\end{subfigure}
-	\caption{Confusion Matrices for a random split of the provided data.}
+	\caption{Confusion Matrices for pixel-based vs. deep features on random split of the provided data (same split for both).}
 	\label{fig:pixel_based_cm}
 	\end{figure}
 	
-	
-	Accuracy and F1-score
-	
-	Map with colored rectangles indicating roof security
-	
-	
-	\textbf{Calculate the log loss!!}
-	
-	
-	Results qualitative (e.g. maps) and quantitative (e.g. accuracies, statistics). /!\ This implies that you have either access to groundtruth data or digitized/photointerpreted some areas in order to compute accuracies.
+	Map with colored rectangles indicating roof security?????????????
 	
 	
 	\section{Discussion}
 	\label{sec:discussion}
+	
+	Comment on confusion matrices
+	
+	Comment on class imbalance
+	
+	
 	Discussion where you are critical about what has been done and what could be further explored. You have investigated a topic and achieving your initial goal is not always possible in a fixed time frame, however you should be able to assess your situation and what should then be done/improved in order to reach your goal.
 	
 	\subsection{Outlook}
@@ -331,15 +328,12 @@
 	Assess the "real performance" by cleaning up the noisy data
 	
 	\section{Appendix}
-	APPENDIX: Include your scripts (Matlab, GoogleEarthEngine or others) and the specific functions you used in QGIS (if applicable)
-	*Include a descriptive header on your different scripts
-	* Comment your code, use indentation and spacing
-	* Only keep the code you used for your latest results
-	
+
+	The used code is publicly accessible on GitHub, mostly in the form of Jupyter Notebooks \\
+	(see \url{https://github.com/jo-ruether/ipeo_carribean}).
 	
 	
 	\bibliography{ipeo} 
-	
 	\bibliographystyle{ieeetr}
 
 \end{document}

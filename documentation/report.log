@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.10)  9 JAN 2020 11:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.10)  9 JAN 2020 14:27
 entering extended mode
 **./report.tex
 (report.tex
@@ -249,34 +249,143 @@ File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 \Gin@req@height=\dimen126
 \Gin@req@width=\dimen127
 )
-("C:\Users\Johannes\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\geomet
-ry.sty"
-Package: geometry 2010/09/12 v5.6 Page Geometry
+("C:\Users\Johannes\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\hyperr
+ef.sty"
+Package: hyperref 2018/02/06 v6.86b Hypertext links for LaTeX
 
-("C:\Users\Johannes\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifpd
-f.sty"
-Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
-)
-("C:\Users\Johannes\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifvt
-ex.sty"
+("C:\Users\Johannes\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\hobs
+ub-hyperref.sty"
+Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
+
+
+("C:\Users\Johannes\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\hobs
+ub-generic.sty"
+Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
 Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
+Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+Package: pdftexcmds 2018/01/21 v0.26 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
+)
+Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
+Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
+Package: xcolor-patch 2016/05/16 xcolor patch
+Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
+Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
+Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
 )
 ("C:\Users\Johannes\AppData\Local\Programs\MiKTeX 2.9\tex\generic\ifxetex\ifxet
 ex.sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count103
-\Gm@cntv=\count104
-\c@Gm@tempcnt=\count105
-\Gm@bindingoffset=\dimen128
-\Gm@wd@mp=\dimen129
-\Gm@odd@mp=\dimen130
-\Gm@even@mp=\dimen131
-\Gm@layoutwidth=\dimen132
-\Gm@layoutheight=\dimen133
-\Gm@layouthoffset=\dimen134
-\Gm@layoutvoffset=\dimen135
+("C:\Users\Johannes\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\auxhoo
+k.sty"
+Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
+)
+("C:\Users\Johannes\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\kvopti
+ons.sty"
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+)
+\@linkdim=\dimen128
+\Hy@linkcounter=\count103
+\Hy@pagecounter=\count104
+
+("C:\Users\Johannes\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\pd1enc
+.def"
+File: pd1enc.def 2018/02/06 v6.86b Hyperref: PDFDocEncoding definition (HO)
+)
+\Hy@SavedSpaceFactor=\count105
+
+("C:\Users\Johannes\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00miktex\hyperr
+ef.cfg"
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4509.
+Package hyperref Info: Link nesting OFF on input line 4514.
+Package hyperref Info: Hyper index ON on input line 4517.
+Package hyperref Info: Plain pages OFF on input line 4524.
+Package hyperref Info: Backreferencing OFF on input line 4529.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4762.
+\c@Hy@tempcnt=\count106
+
+("C:\Users\Johannes\AppData\Local\Programs\MiKTeX 2.9\tex\latex\url\url.sty"
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5115.
+\XeTeXLinkMargin=\dimen129
+\Fld@menulength=\count107
+\Field@Width=\dimen130
+\Fld@charsize=\dimen131
+Package hyperref Info: Hyper figures OFF on input line 6369.
+Package hyperref Info: Link nesting OFF on input line 6374.
+Package hyperref Info: Hyper index ON on input line 6377.
+Package hyperref Info: backreferencing OFF on input line 6384.
+Package hyperref Info: Link coloring OFF on input line 6389.
+Package hyperref Info: Link coloring with OCG OFF on input line 6394.
+Package hyperref Info: PDF/A mode OFF on input line 6399.
+LaTeX Info: Redefining \ref on input line 6439.
+LaTeX Info: Redefining \pageref on input line 6443.
+\Hy@abspage=\count108
+\c@Item=\count109
+\c@Hfootnote=\count110
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+("C:\Users\Johannes\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\hpdfte
+x.def"
+File: hpdftex.def 2018/02/06 v6.86b Hyperref driver for pdfTeX
+\Fld@listcount=\count111
+\c@bookmark@seq@number=\count112
+
+("C:\Users\Johannes\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\rerunf
+ilecheck.sty"
+Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip48
+)
+("C:\Users\Johannes\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\geomet
+ry.sty"
+Package: geometry 2010/09/12 v5.6 Page Geometry
+\Gm@cnth=\count113
+\Gm@cntv=\count114
+\c@Gm@tempcnt=\count115
+\Gm@bindingoffset=\dimen132
+\Gm@wd@mp=\dimen133
+\Gm@odd@mp=\dimen134
+\Gm@even@mp=\dimen135
+\Gm@layoutwidth=\dimen136
+\Gm@layoutheight=\dimen137
+\Gm@layouthoffset=\dimen138
+\Gm@layoutvoffset=\dimen139
 \Gm@dimlist=\toks22
 
 ("C:\Users\Johannes\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\geomet
@@ -289,52 +398,9 @@ Package: epstopdf 2016/05/15 v2.6 Conversion with epstopdf on the fly (HO)
 df-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
-("C:\Users\Johannes\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\infw
-arerr.sty"
-Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
-)
 ("C:\Users\Johannes\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\grfext
 .sty"
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
-
-("C:\Users\Johannes\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\kvde
-finekeys.sty"
-Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-
-("C:\Users\Johannes\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ltxc
-mds.sty"
-Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
-)))
-("C:\Users\Johannes\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\kvopti
-ons.sty"
-Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
-
-("C:\Users\Johannes\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\kvse
-tkeys.sty"
-Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
-
-("C:\Users\Johannes\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\etex
-cmds.sty"
-Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
-
-("C:\Users\Johannes\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\iflu
-atex.sty"
-Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
-)
-Package etexcmds Info: Could not find \expanded.
-(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
-(etexcmds)             that some package has redefined \expanded.
-(etexcmds)             In the latter case, load this package earlier.
-)))
-("C:\Users\Johannes\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\pdft
-excmds.sty"
-Package: pdftexcmds 2018/01/21 v0.26 Utility functions of pdfTeX for LuaTeX (HO
-)
-Package pdftexcmds Info: LuaTeX not detected.
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
 )
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 38.
@@ -346,47 +412,71 @@ G,.JBIG2,.JB2,.eps]
 Package grfext Info: Graphics extension search list:
 (grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
 G,.JBIG2,.JB2,.eps,.tif]
-(grfext)             \AppendGraphicsExtensions on input line 14.
+(grfext)             \AppendGraphicsExtensions on input line 15.
  (report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 24.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 24.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 25.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 25.
 
 ("C:\Users\Johannes\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 
 ("C:\Users\Johannes\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf
 .mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count106
-\scratchdimen=\dimen136
+\scratchcounter=\count116
+\scratchdimen=\dimen140
 \scratchbox=\box28
-\nofMPsegments=\count107
-\nofMParguments=\count108
+\nofMPsegments=\count117
+\nofMParguments=\count118
 \everyMPshowfont=\toks23
-\MPscratchCnt=\count109
-\MPscratchDim=\dimen137
-\MPnumerator=\count110
-\makeMPintoPDFobject=\count111
+\MPscratchCnt=\count119
+\MPscratchDim=\dimen141
+\MPnumerator=\count120
+\makeMPintoPDFobject=\count121
 \everyMPtoPDFconversion=\toks24
 )
+\AtBeginShipoutBox=\box29
+Package hyperref Info: Link coloring OFF on input line 25.
+
+("C:\Users\Johannes\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\namere
+f.sty"
+Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
+
+("C:\Users\Johannes\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\gett
+itlestring.sty"
+Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
+)
+\c@section@level=\count122
+)
+LaTeX Info: Redefining \ref on input line 25.
+LaTeX Info: Redefining \pageref on input line 25.
+LaTeX Info: Redefining \nameref on input line 25.
+ (report.out) (report.out)
+\@outlinefile=\write3
+\openout3 = `report.out'.
+
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -422,206 +512,241 @@ Package caption Info: End \AtBeginDocument code.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 33--36
+Underfull \hbox (badness 10000) in paragraph at lines 34--37
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 39--41
+Underfull \hbox (badness 10000) in paragraph at lines 40--42
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 46--47
+Underfull \hbox (badness 10000) in paragraph at lines 45--46
 
  []
 
-<figures/thumbnail_dennery.png, id=1, 1041.8925pt x 531.1845pt>
+<figures/thumbnail_dennery.png, id=79, 1041.8925pt x 531.1845pt>
 File: figures/thumbnail_dennery.png Graphic file (type png)
 <use figures/thumbnail_dennery.png>
-Package pdftex.def Info: figures/thumbnail_dennery.png  used on input line 56.
-(pdftex.def)             Requested size: 398.93158pt x 203.38408pt.
+Package pdftex.def Info: figures/thumbnail_dennery.png  used on input line 55.
+(pdftex.def)             Requested size: 349.06227pt x 177.95802pt.
 [1
 
 {C:/Users/Johannes/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 72--73
+Underfull \hbox (badness 10000) in paragraph at lines 71--72
 \OT1/cmr/m/n/10.95 https://www.drivendata.org/competitions/58/disaster-
  []
 
-[2 <./figures/thumbnail_dennery.png>]
-<figures/mat_examples/conc1.png, id=16, 436.63126pt x 497.86pt>
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 83.
+See the caption package documentation for explanation.
+
+<figures/mat_examples/conc1.png, id=97, 436.63126pt x 497.86pt>
 File: figures/mat_examples/conc1.png Graphic file (type png)
 <use figures/mat_examples/conc1.png>
-Package pdftex.def Info: figures/mat_examples/conc1.png  used on input line 106
+Package pdftex.def Info: figures/mat_examples/conc1.png  used on input line 105
 .
 (pdftex.def)             Requested size: 75.00075pt x 85.5163pt.
-<figures/mat_examples/conc2.png, id=17, 256.96pt x 265.99374pt>
+<figures/mat_examples/conc2.png, id=98, 256.96pt x 265.99374pt>
 File: figures/mat_examples/conc2.png Graphic file (type png)
 <use figures/mat_examples/conc2.png>
-Package pdftex.def Info: figures/mat_examples/conc2.png  used on input line 107
+Package pdftex.def Info: figures/mat_examples/conc2.png  used on input line 106
 .
 (pdftex.def)             Requested size: 75.00075pt x 77.63542pt.
-<figures/mat_examples/hm1.png, id=18, 246.9225pt x 249.93375pt>
+<figures/mat_examples/hm1.png, id=99, 246.9225pt x 249.93375pt>
 File: figures/mat_examples/hm1.png Graphic file (type png)
 <use figures/mat_examples/hm1.png>
-Package pdftex.def Info: figures/mat_examples/hm1.png  used on input line 111.
+Package pdftex.def Info: figures/mat_examples/hm1.png  used on input line 110.
 (pdftex.def)             Requested size: 75.00075pt x 75.91505pt.
-<figures/mat_examples/hm2.png, id=19, 199.74625pt x 184.69pt>
+<figures/mat_examples/hm2.png, id=100, 199.74625pt x 184.69pt>
 File: figures/mat_examples/hm2.png Graphic file (type png)
 <use figures/mat_examples/hm2.png>
-Package pdftex.def Info: figures/mat_examples/hm2.png  used on input line 112.
+Package pdftex.def Info: figures/mat_examples/hm2.png  used on input line 111.
 (pdftex.def)             Requested size: 75.00075pt x 69.34593pt.
-<figures/mat_examples/inc1.png, id=20, 331.2375pt x 225.84375pt>
+<figures/mat_examples/inc1.png, id=101, 331.2375pt x 225.84375pt>
 File: figures/mat_examples/inc1.png Graphic file (type png)
 <use figures/mat_examples/inc1.png>
-Package pdftex.def Info: figures/mat_examples/inc1.png  used on input line 116.
+Package pdftex.def Info: figures/mat_examples/inc1.png  used on input line 115.
 
 (pdftex.def)             Requested size: 75.00075pt x 51.13658pt.
-<figures/mat_examples/inc2.png, id=21, 330.23375pt x 278.03876pt>
+<figures/mat_examples/inc2.png, id=102, 330.23375pt x 278.03876pt>
 File: figures/mat_examples/inc2.png Graphic file (type png)
 <use figures/mat_examples/inc2.png>
-Package pdftex.def Info: figures/mat_examples/inc2.png  used on input line 117.
+Package pdftex.def Info: figures/mat_examples/inc2.png  used on input line 116.
 
 (pdftex.def)             Requested size: 75.00075pt x 63.14572pt.
-<figures/mat_examples/irr1.png, id=22, 217.81375pt x 181.67876pt>
+<figures/mat_examples/irr1.png, id=103, 217.81375pt x 181.67876pt>
 File: figures/mat_examples/irr1.png Graphic file (type png)
 <use figures/mat_examples/irr1.png>
-Package pdftex.def Info: figures/mat_examples/irr1.png  used on input line 121.
+Package pdftex.def Info: figures/mat_examples/irr1.png  used on input line 120.
 
 (pdftex.def)             Requested size: 51.06537pt x 42.59193pt.
-<figures/mat_examples/irr2.png, id=23, 105.39375pt x 173.64874pt>
+<figures/mat_examples/irr2.png, id=104, 105.39375pt x 173.64874pt>
 File: figures/mat_examples/irr2.png Graphic file (type png)
 <use figures/mat_examples/irr2.png>
-Package pdftex.def Info: figures/mat_examples/irr2.png  used on input line 122.
+Package pdftex.def Info: figures/mat_examples/irr2.png  used on input line 121.
 
 (pdftex.def)             Requested size: 51.06537pt x 84.13739pt.
-<figures/mat_examples/other1.png, id=24, 113.42375pt x 130.4875pt>
+<figures/mat_examples/other1.png, id=105, 113.42375pt x 130.4875pt>
 File: figures/mat_examples/other1.png Graphic file (type png)
 <use figures/mat_examples/other1.png>
 Package pdftex.def Info: figures/mat_examples/other1.png  used on input line 12
-7.
+6.
 (pdftex.def)             Requested size: 55.85245pt x 64.25401pt.
-<figures/mat_examples/other2.png, id=25, 710.655pt x 666.49pt>
+<figures/mat_examples/other2.png, id=106, 710.655pt x 666.49pt>
 File: figures/mat_examples/other2.png Graphic file (type png)
 <use figures/mat_examples/other2.png>
 Package pdftex.def Info: figures/mat_examples/other2.png  used on input line 12
-8.
+7.
 (pdftex.def)             Requested size: 71.80856pt x 67.34445pt.
-<figures/wrong_labels/hm_rusty.png, id=26, 284.06125pt x 313.17pt>
+[2 <./figures/thumbnail_dennery.png>]
+<figures/wrong_labels/hm_rusty.png, id=122, 284.06125pt x 313.17pt>
 File: figures/wrong_labels/hm_rusty.png Graphic file (type png)
 <use figures/wrong_labels/hm_rusty.png>
 Package pdftex.def Info: figures/wrong_labels/hm_rusty.png  used on input line 
-152.
-(pdftex.def)             Requested size: 111.3008pt x 122.70445pt.
-<figures/wrong_labels/irr_rusty.png, id=27, 273.02pt x 291.0875pt>
+151.
+(pdftex.def)             Requested size: 96.9417pt x 106.87778pt.
+<figures/wrong_labels/irr_rusty.png, id=123, 273.02pt x 291.0875pt>
 File: figures/wrong_labels/irr_rusty.png Graphic file (type png)
 <use figures/wrong_labels/irr_rusty.png>
 Package pdftex.def Info: figures/wrong_labels/irr_rusty.png  used on input line
- 157.
-(pdftex.def)             Requested size: 111.3008pt x 118.66707pt.
-<figures/wrong_labels/hm_should_be_conc.png, id=28, 210.7875pt x 144.54pt>
+ 156.
+(pdftex.def)             Requested size: 96.9417pt x 103.35677pt.
+<figures/wrong_labels/hm_should_be_conc.png, id=124, 210.7875pt x 144.54pt>
 File: figures/wrong_labels/hm_should_be_conc.png Graphic file (type png)
 <use figures/wrong_labels/hm_should_be_conc.png>
 Package pdftex.def Info: figures/wrong_labels/hm_should_be_conc.png  used on in
-put line 162.
-(pdftex.def)             Requested size: 139.12482pt x 95.4011pt.
-<figures/wrong_labels/irr_holes.png, id=29, 244.66406pt x 124.96687pt>
+put line 161.
+(pdftex.def)             Requested size: 121.17609pt x 83.09439pt.
+<figures/wrong_labels/irr_holes.png, id=125, 244.66406pt x 124.96687pt>
 File: figures/wrong_labels/irr_holes.png Graphic file (type png)
 <use figures/wrong_labels/irr_holes.png>
 Package pdftex.def Info: figures/wrong_labels/irr_holes.png  used on input line
- 168.
-(pdftex.def)             Requested size: 133.63914pt x 68.2591pt.
-<figures/wrong_labels/inc_holes.png, id=30, 269.50688pt x 150.5625pt>
+ 167.
+(pdftex.def)             Requested size: 116.93808pt x 59.7298pt.
+<figures/wrong_labels/inc_holes.png, id=126, 269.50688pt x 150.5625pt>
 File: figures/wrong_labels/inc_holes.png Graphic file (type png)
 <use figures/wrong_labels/inc_holes.png>
 Package pdftex.def Info: figures/wrong_labels/inc_holes.png  used on input line
- 173.
-(pdftex.def)             Requested size: 143.61285pt x 80.23193pt.
+ 172.
+(pdftex.def)             Requested size: 125.66536pt x 70.20381pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 185--188
+Underfull \hbox (badness 10000) in paragraph at lines 184--187
 
  []
 
+<figures/flowchart.pdf, id=133, 558.16531pt x 298.23419pt>
+File: figures/flowchart.pdf Graphic file (type pdf)
+<use figures/flowchart.pdf>
+Package pdftex.def Info: figures/flowchart.pdf  used on input line 194.
+(pdftex.def)             Requested size: 398.93158pt x 213.15392pt.
 [3 <./figures/mat_examples/conc1.png> <./figures/mat_examples/conc2.png> <./fig
 ures/mat_examples/hm1.png> <./figures/mat_examples/hm2.png> <./figures/mat_exam
 ples/inc1.png> <./figures/mat_examples/inc2.png> <./figures/mat_examples/irr1.p
 ng> <./figures/mat_examples/irr2.png> <./figures/mat_examples/other1.png> <./fi
-gures/mat_examples/other2.png>]
-<figures/flowchart.pdf, id=44, 558.16531pt x 298.23419pt>
-File: figures/flowchart.pdf Graphic file (type pdf)
-<use figures/flowchart.pdf>
-Package pdftex.def Info: figures/flowchart.pdf  used on input line 195.
-(pdftex.def)             Requested size: 398.93158pt x 213.15392pt.
-<figures/pixel_based/rgb_channels.png, id=45, 1156.32pt x 361.35pt>
+gures/mat_examples/other2.png>] [4 <./figures/wrong_labels/hm_rusty.png> <./fig
+ures/wrong_labels/irr_rusty.png> <./figures/wrong_labels/hm_should_be_conc.png>
+ <./figures/wrong_labels/irr_holes.png> <./figures/wrong_labels/inc_holes.png> 
+<./figures/flowchart.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures/flowchart.pdf): PDF inclusion: inv
+alid other resource which is no dict (key 'ProcSets', type <array>); ignored.
+>]
+<figures/pixel_based/rgb_channels.png, id=180, 1156.32pt x 361.35pt>
 File: figures/pixel_based/rgb_channels.png Graphic file (type png)
 <use figures/pixel_based/rgb_channels.png>
 Package pdftex.def Info: figures/pixel_based/rgb_channels.png  used on input li
 ne 207.
 (pdftex.def)             Requested size: 498.66258pt x 96.45094pt.
-<figures/pixel_based/sobel.png, id=47, 1156.32pt x 361.35pt>
+<figures/pixel_based/sobel.png, id=182, 1156.32pt x 361.35pt>
 File: figures/pixel_based/sobel.png Graphic file (type png)
 <use figures/pixel_based/sobel.png>
 Package pdftex.def Info: figures/pixel_based/sobel.png  used on input line 211.
 
 (pdftex.def)             Requested size: 378.98378pt x 100.32977pt.
- [4 <./figures/wrong_labels/hm_rusty.png> <./figures/wrong_labels/irr_rusty.png
-> <./figures/wrong_labels/hm_should_be_conc.png> <./figures/wrong_labels/irr_ho
-les.png> <./figures/wrong_labels/inc_holes.png>] [5 <./figures/pixel_based/rgb_
-channels.png> <./figures/pixel_based/sobel.png> <./figures/flowchart.pdf
+ [5 <./figures/pixel_based/rgb_channels.png> <./figures/pixel_based/sobel.png>]
 
-pdfTeX warning: pdflatex.exe (file ./figures/flowchart.pdf): PDF inclusion: inv
-alid other resource which is no dict (key 'ProcSets', type <array>); ignored.
->]
-<figures/results/pixel_based_cm.png, id=84, 614.295pt x 614.295pt>
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 256.
+See the caption package documentation for explanation.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 278--279
+[]|\OT1/cmr/m/n/10.95 Avg.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 278--279
+\OT1/cmr/m/n/10.95 Macro-
+ []
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 291.
+See the caption package documentation for explanation.
+
+<figures/results/pixel_based_cm.png, id=204, 614.295pt x 614.295pt>
 File: figures/results/pixel_based_cm.png Graphic file (type png)
 <use figures/results/pixel_based_cm.png>
 Package pdftex.def Info: figures/results/pixel_based_cm.png  used on input line
- 288.
+ 300.
 (pdftex.def)             Requested size: 224.39662pt x 224.39859pt.
-<figures/results/nn_based_cm.png, id=85, 614.295pt x 614.295pt>
+<figures/results/nn_based_cm.png, id=205, 614.295pt x 614.295pt>
 File: figures/results/nn_based_cm.png Graphic file (type png)
 <use figures/results/nn_based_cm.png>
-Package pdftex.def Info: figures/results/nn_based_cm.png  used on input line 29
-3.
+Package pdftex.def Info: figures/results/nn_based_cm.png  used on input line 30
+5.
 (pdftex.def)             Requested size: 224.39662pt x 224.39859pt.
 
-Overfull \hbox (2.43332pt too wide) in paragraph at lines 286--296
+Overfull \hbox (2.43332pt too wide) in paragraph at lines 298--308
 [][] [] 
  []
 
-[6 <./figures/results/pixel_based_cm.png> <./figures/results/nn_based_cm.png>]
-(report.bbl
+[6] (report.bbl
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
-) [7] (report.aux) ) 
+ [7 <./figures/results/pixel_based_cm.png> <./figures/results/nn_based_cm.png>]
+)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 339.
+ [8]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 339.
+ (report.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 339.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 339.
+Package rerunfilecheck Info: File `report.out' has not changed.
+(rerunfilecheck)             Checksum: 9EB3DED6499710453DA7F6F653E09615;1135.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 339.
+ ) 
 Here is how much of TeX's memory you used:
- 4379 strings out of 493305
- 69738 string characters out of 3128497
- 127480 words of memory out of 3000000
- 7854 multiletter control sequences out of 15000+200000
- 10362 words of font info for 37 fonts, out of 3000000 for 9000
+ 7896 strings out of 493305
+ 123174 string characters out of 3128497
+ 206938 words of memory out of 3000000
+ 11308 multiletter control sequences out of 15000+200000
+ 10222 words of font info for 37 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,9n,40p,616b,447s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/Johannes/AppData/Local/Programs/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Johannes/AppData/Local/Programs/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Johannes/AppData/
-Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/J
-ohannes/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10
-.pfb><C:/Users/Johannes/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/am
-sfonts/cm/cmmi8.pfb><C:/Users/Johannes/AppData/Local/Programs/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Johannes/AppData/Local/Programs/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Johannes/AppData/Lo
-cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Johan
-nes/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+ 42i,9n,40p,686b,464s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/Johannes/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmbx12.pfb><C:/Users/Johannes/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmex10.pfb><C:/Users/Johannes/AppData/Local/Programs/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Johannes/AppData/Lo
+cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Joha
+nnes/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb
 ><C:/Users/Johannes/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmti10.pfb>
-Output written on report.pdf (7 pages, 5203196 bytes).
+ts/cm/cmr12.pfb><C:/Users/Johannes/AppData/Local/Programs/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmr8.pfb><C:/Users/Johannes/AppData/Local/Programs/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Johannes/AppData/Local/
+Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Johanne
+s/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on report.pdf (8 pages, 5220387 bytes).
 PDF statistics:
- 127 PDF objects out of 1000 (max. 8388607)
- 0 named destinations out of 1000 (max. 500000)
- 118 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 273 PDF objects out of 1000 (max. 8388607)
+ 52 named destinations out of 1000 (max. 500000)
+ 262 words of extra memory for PDF output out of 10000 (max. 10000000)
 
