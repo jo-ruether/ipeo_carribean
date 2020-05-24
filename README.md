@@ -4,6 +4,9 @@ This repository documents my attempt to solve the *Open AI Caribbean Challenge: 
 It also serves as presentation for my final project of the "Image Processing for Earth Observation" course at EPFL.
 
 ## Required packages
-*rasterio
-*scikit-learn
-*keras
+* rasterio: `pip install rasterio`
+* scikit-learn: `pip install scikit-learn`
+* keras: `pip install Keras`
+* Pyproj: `pip install pyproj`
+* tqdm: `pip install tqdm`
+* tensorflow: `pip install tensorflow`
