@@ -6,7 +6,6 @@ It also serves as presentation for my final project of the "Image Processing for
 ## Required packages
 * rasterio: `pip install rasterio`
 * scikit-learn: `pip install scikit-learn`
-* keras: `pip install Keras`
+* keras: `conda install -c anaconda keras`
 * Pyproj: `pip install pyproj`
 * tqdm: `pip install tqdm`
-* tensorflow: `pip install tensorflow`
