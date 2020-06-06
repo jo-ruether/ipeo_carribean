@@ -5,7 +5,17 @@ It also serves as presentation for my final project of the "Image Processing for
 
 ## Required packages
 * rasterio: `pip install rasterio`
+
 * scikit-learn: `pip install scikit-learn`
+
 * keras: `conda install -c anaconda keras`
+
 * Pyproj: `pip install pyproj`
+
 * tqdm: `pip install tqdm`
+
+* pandas `conda install pandas`
+
+* seaborn `conda install seaborn`
+
+  
