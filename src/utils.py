@@ -1,34 +1,91 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import matplotlib
-import rasterio
 from os.path import dirname, join
 from sklearn.manifold import TSNE
+import pickle
+import json
 
-def plot_tSNE(features, labels=None, number_of_materials=5, title='default_title', path='.'):
-    if labels is None:
-        labels = np.zeros((features.shape[0]))
-
-    tsne_features = TSNE(n_components=2).fit_transform(features)
-
-    # define the colormap
-    cmap = plt.cm.jet
-    # extract all colors from the .jet map
-    cmaplist = [cmap(i) for i in range(cmap.N)]
-    # create the new map
-    cmap = cmap.from_list('Custom cmap', cmaplist, cmap.N)
-
-    # define the bins and normalize
-    bounds = np.linspace(0, number_of_materials, number_of_materials + 1)
-    norm = matplotlib.colors.BoundaryNorm(bounds, cmap.N)
+def get_labels(sets, data_path):
+    """
+    Combine all `simple_labels.json` files into one dict.
     
-    print(tsne_features.shape)
+    Parameters
+    ----------
+    sets : list of tuples
+        tuples of kind ('country', 'region')
+    data_path : str
+        root path containing country folders
+        
+    Returns
+    -------
+    labels_dict : dict
+        dict with entries of kind 'id':'label'
+    
+    """
 
-    plt.figure()
-    plt.title(title)
-    scat = plt.scatter(tsne_features[:, 0], tsne_features[:, 1], c=labels, cmap=cmap, norm=norm)
-    cb = plt.colorbar(scat, spacing='proportional', ticks=bounds)
-    plt.savefig(join(path, title+'.png'))
+    labels_dict = {}
+    for country, region in sets:
+        try:
+            with open(join(data_path, country, region, 'roofs_train', 'simple_labels.json')) as label_file:
+                labels_region = json.load(label_file)
+            labels_dict.update(labels_region)
+        except:
+            print(f"Error reading labels for region {region}")
+
+    return labels_dict
+
+
+def get_features(sets, feature_path, model_name, dim, pooling_method):
+    """
+    Combine all features into one tensor.
+    
+    Parameters
+    ----------
+    sets : list of tuples
+        tuples of kind ('country', 'region')
+    feature_path : str
+        path containing features
+    model_name : str
+        name of the model used to compute features
+    dim : int
+        input height or width of the model used to compute features
+    pooling_method : str
+        pooling method at last layer of the model used to compute features
+    
+    Returns
+    -------
+    features : ndarray
+        Tensor containing features of all specified sets of regions
+    
+    """
+    
+    first = True
+    for _, region in sets:
+        try:
+            with open(join(feature_path, f'{model_name}_{dim}_{pooling_method}_{region}_train.pkl' ), 'rb') as f:
+                features_region = pickle.load(f)
+            if first:
+                features = features_region
+            else:
+                features = np.concatenate(features, features_region)
+        except:
+            logging.warning(f"Error reading training features for region {region}.")
+    
+    return features
+
+
+def labels_int(labels):
+    """
+    Converts a list of label strings to a list of label integers according to the materials dict.
+    """
+    materials = {'concrete_cement':0, 'healthy_metal':1, 'incomplete':2, 'irregular_metal':3, 'other':4}
+    
+    labels_int = []
+    for l in labels:
+        labels_int.append(materials[l])
+    return labels_int
+
 
 def thumbnail(image_fp, dec_factor=32):
     """
@@ -57,6 +114,7 @@ def thumbnail(image_fp, dec_factor=32):
         for k, arr in [(1, b), (2, g), (3, r)]:
             dst.write(arr, indexes=k)
 
+            
 def heatmap(data, row_labels, col_labels, ax=None,
             cbar_kw={}, cbarlabel="", **kwargs):
     """
