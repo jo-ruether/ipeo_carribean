@@ -18,4 +18,6 @@ It also serves as presentation for my final project of the "Image Processing for
 
 * seaborn `conda install seaborn`
 
+* scikit-image `conda install scikit-image`
+
   
