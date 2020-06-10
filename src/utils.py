@@ -5,6 +5,7 @@ from os.path import dirname, join
 from sklearn.manifold import TSNE
 import pickle
 import json
+import logging
 
 def get_labels(sets, data_path):
     """
@@ -63,15 +64,18 @@ def get_features(sets, feature_path, model_name, dim, pooling_method):
     first = True
     for _, region in sets:
         try:
-            with open(join(feature_path, f'{model_name}_{dim}_{pooling_method}_{region}_train.pkl' ), 'rb') as f:
+            with open(join(feature_path, f'{model_name}_{dim}_{pooling_method}_{region}_train.pkl'), 'rb') as f:
                 features_region = pickle.load(f)
-            if first:
-                features = features_region
-            else:
-                features = np.concatenate(features, features_region)
         except:
             logging.warning(f"Error reading training features for region {region}.")
-    
+            continue
+            
+        if first:
+            features = features_region
+            first = False
+        else:
+            features = np.concatenate((features, features_region))
+            
     return features
 
 
