@@ -8,8 +8,9 @@ I participated in this challenge as the final project of the "Image Processing f
 
 ## 1 Introduction
 
-Regions like the Carribean are regularly hit by rainstorms, floods or earthquakes. Despite being so prone, many houses in those areas are unable to withstand these natural hazards due to poor construction quality.
-International programs such as the World Bank's Global Program for Resilient Housing are making attempts to retrofit houses to the natural forces they are exposed to. The material that a roof is made up of is a central indicator for how well a house is prepared against natural disasters. 
+Regions like the Carribean are regularly hit by rainstorms, floods or earthquakes. Despite being so prone to natural hazards, many houses in those areas are unable to withstand them due to poor construction quality.
+International programs such as the World Bank's Global Program for Resilient Housing are making attempts to retrofit houses to the natural forces they are exposed to. 
+The material that their roof is made up of is a central indicator for how well a house is prepared against natural disasters. 
 Exploring these areas on the ground is time-consuming and costly. This is why the possibilities of image processing for automatic recognition of vulnerable houses on the basis of drone imagery are explored. Such a technology could assist building inspectors and narrow down large areas to those that are worth a closer inspection on the ground. 
 
 ## 2 Data Description
